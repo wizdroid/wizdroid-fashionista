@@ -1,0 +1,16 @@
+{
+  "body_part": "makeup",
+  "attire": [
+    {"type": "foundation", "country": "neutral"},
+    {"type": "concealer", "country": "neutral"},
+    {"type": "bronzer", "country": "neutral"},
+    {"type": "contour", "country": "neutral"},
+    {"type": "beard filler", "country": "neutral"},
+    {"type": "eyebrow pencil", "country": "neutral"},
+    {"type": "eyebrow gel", "country": "neutral"},
+    {"type": "highlighter", "country": "neutral"},
+    {"type": "setting powder", "country": "neutral"},
+    {"type": "setting spray", "country": "neutral"},
+    {"type": "no makeup", "country": "neutral"}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+    "moods": [
+        "dreamy", "ethereal", "mystical", "dramatic", "serene", "dynamic", "melancholic", "euphoric", "nostalgic", "futuristic", "vintage", "surreal", "intimate", "epic", "whimsical", "dark", "bright", "moody"
+    ],
+    "times": [
+        "dawn", "sunrise", "morning", "midday", "afternoon", "golden hour", "dusk", "sunset", "twilight", "night", "midnight", "blue hour"
+    ],
+    "weather": [
+        "sunny", "partly cloudy", "overcast", "misty", "foggy", "rainy", "stormy", "snowy", "windy", "humid", "dry", "crisp"
+    ],
+    "color_schemes": [
+        "monochromatic", "complementary", "analogous", "triadic", "split-complementary", "warm tones", "cool tones", "earth tones", "pastel", "neon", "muted", "vibrant"
+    ]
+}

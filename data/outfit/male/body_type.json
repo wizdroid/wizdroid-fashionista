@@ -1,0 +1,20 @@
+{
+  "body_part": "body_type",
+  "attire": [
+    {"type": "athletic", "country": "neutral", "description": "muscular, toned physique"},
+    {"type": "slim", "country": "neutral", "description": "lean, slender build"},
+    {"type": "average", "country": "neutral", "description": "medium, proportionate build"},
+    {"type": "stocky", "country": "neutral", "description": "short, solid build"},
+    {"type": "tall", "country": "neutral", "description": "above-average height"},
+    {"type": "short", "country": "neutral", "description": "below-average height"},
+    {"type": "broad-shouldered", "country": "neutral", "description": "wide shoulder span"},
+    {"type": "lean", "country": "neutral", "description": "thin, wiry build"},
+    {"type": "husky", "country": "neutral", "description": "larger, robust build"},
+    {"type": "lanky", "country": "neutral", "description": "tall and thin"},
+    {"type": "compact", "country": "neutral", "description": "solid, well-proportioned"},
+    {"type": "burly", "country": "neutral", "description": "large, strong build"},
+    {"type": "wiry", "country": "neutral", "description": "thin but strong"},
+    {"type": "portly", "country": "neutral", "description": "stout, round build"},
+    {"type": "gangly", "country": "neutral", "description": "tall and awkwardly thin"}
+  ]
+}

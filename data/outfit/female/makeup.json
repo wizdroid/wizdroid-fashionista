@@ -1,0 +1,32 @@
+{
+  "body_part": "makeup",
+  "attire": [
+    {"type": "foundation", "country": "neutral"},
+    {"type": "concealer", "country": "neutral"},
+    {"type": "blush", "country": "neutral"},
+    {"type": "lipstick", "country": "neutral"},
+    {"type": "lip gloss", "country": "neutral"},
+    {"type": "lip stain", "country": "neutral"},
+    {"type": "eyeshadow", "country": "neutral"},
+    {"type": "eyeliner", "country": "neutral"},
+    {"type": "mascara", "country": "neutral"},
+    {"type": "eyebrow pencil", "country": "neutral"},
+    {"type": "eyebrow gel", "country": "neutral"},
+    {"type": "highlighter", "country": "neutral"},
+    {"type": "contour", "country": "neutral"},
+    {"type": "bronzer", "country": "neutral"},
+    {"type": "setting powder", "country": "neutral"},
+    {"type": "setting spray", "country": "neutral"},
+    {"type": "no makeup", "country": "neutral"},
+    {"type": "nail polish", "country": "neutral"},
+    {"type": "gel nails", "country": "neutral"},
+    {"type": "acrylic nails", "country": "neutral"},
+    {"type": "french manicure", "country": "France"},
+    {"type": "matte nails", "country": "neutral"},
+    {"type": "glossy nails", "country": "neutral"},
+    {"type": "glitter nails", "country": "neutral"},
+    {"type": "metallic nails", "country": "neutral"},
+    {"type": "chrome nails", "country": "neutral"},
+    {"type": "holographic nails", "country": "neutral"}
+  ]
+}

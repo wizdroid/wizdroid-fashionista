@@ -1,0 +1,30 @@
+{
+  "body_part": "eyewear",
+  "attire": [
+    {"type": "prescription glasses", "country": "neutral", "material": "plastic"},
+    {"type": "reading glasses", "country": "neutral", "material": "plastic"},
+    {"type": "sunglasses", "country": "neutral", "material": "plastic"},
+    {"type": "cat-eye glasses", "country": "neutral", "material": "plastic"},
+    {"type": "round glasses", "country": "neutral", "material": "metal"},
+    {"type": "square glasses", "country": "neutral", "material": "plastic"},
+    {"type": "aviator sunglasses", "country": "neutral", "material": "metal"},
+    {"type": "oversized sunglasses", "country": "neutral", "material": "plastic"},
+    {"type": "butterfly glasses", "country": "neutral", "material": "plastic"},
+    {"type": "horn-rimmed glasses", "country": "neutral", "material": "plastic"},
+    {"type": "wire-frame glasses", "country": "neutral", "material": "metal"},
+    {"type": "rimless glasses", "country": "neutral", "material": "glass"},
+    {"type": "designer glasses", "country": "neutral", "material": "plastic"},
+    {"type": "vintage glasses", "country": "neutral", "material": "metal"},
+    {"type": "safety glasses", "country": "neutral", "material": "plastic"},
+    {"type": "sports glasses", "country": "neutral", "material": "plastic"},
+    {"type": "ski goggles", "country": "neutral", "material": "plastic"},
+    {"type": "swimming goggles", "country": "neutral", "material": "plastic"},
+    {"type": "contact lenses", "country": "neutral", "material": "plastic"},
+    {"type": "colored contacts", "country": "neutral", "material": "plastic"},
+    {"type": "monocle", "country": "neutral", "material": "glass"},
+    {"type": "lorgnette", "country": "France", "material": "metal"},
+    {"type": "pince-nez", "country": "neutral", "material": "metal"},
+    {"type": "eye mask", "country": "neutral", "material": "fabric"},
+    {"type": "no eyewear", "country": "neutral", "material": "none"}
+  ]
+}

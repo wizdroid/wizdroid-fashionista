@@ -1,0 +1,28 @@
+{
+  "body_part": "feet",
+  "attire": [
+    {"type": "dress shoes", "country": "neutral"},
+    {"type": "sneakers", "country": "neutral"},
+    {"type": "boots", "country": "neutral"},
+    {"type": "loafers", "country": "neutral"},
+    {"type": "oxfords", "country": "UK"},
+    {"type": "brogues", "country": "Scotland"},
+    {"type": "derbys", "country": "neutral"},
+    {"type": "monks", "country": "neutral"},
+    {"type": "boat shoes", "country": "neutral"},
+    {"type": "sandals", "country": "neutral"},
+    {"type": "flip-flops", "country": "neutral"},
+    {"type": "clogs", "country": "Netherlands"},
+    {"type": "moccasins", "country": "Native American"},
+    {"type": "espadrilles", "country": "Spain"},
+    {"type": "combat boots", "country": "neutral"},
+    {"type": "work boots", "country": "neutral"},
+    {"type": "hiking boots", "country": "neutral"},
+    {"type": "chelsea boots", "country": "UK"},
+    {"type": "cowboy boots", "country": "USA"},
+    {"type": "running shoes", "country": "neutral"},
+    {"type": "basketball shoes", "country": "neutral"},
+    {"type": "skate shoes", "country": "neutral"},
+    {"type": "bare feet", "country": "neutral"}
+  ]
+}

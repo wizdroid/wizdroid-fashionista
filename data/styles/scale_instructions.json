@@ -1,0 +1,9 @@
+{
+    "none": "",
+    "exact": "Strictly follow the user's prompt. Do not add extra details or embellishments.",
+    "detailed": "Add more detail and description to the prompt, focusing on visual elements, textures, and atmosphere.",
+    "extra details": "Add rich, vivid descriptions and creative flourishes to the prompt, expanding on implied visual elements.",
+    "exaggerated": "Greatly exaggerate and elaborate on the prompt with highly imaginative, detailed descriptions and dramatic elements.",
+    "masterpiece": "Transform this into a museum-quality masterpiece description with exceptional artistic detail, composition, and technical excellence.",
+    "cinematic": "Create a cinematic, movie-quality scene with professional lighting, dramatic composition, and film-like atmosphere."
+}

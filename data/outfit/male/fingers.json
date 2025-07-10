@@ -1,0 +1,20 @@
+{
+  "body_part": "fingers",
+  "attire": [
+    {"type": "wedding ring", "country": "neutral", "material": "gold"},
+    {"type": "signet ring", "country": "neutral", "material": "gold"},
+    {"type": "class ring", "country": "neutral", "material": "gold"},
+    {"type": "pinky ring", "country": "neutral", "material": "gold"},
+    {"type": "thumb ring", "country": "neutral", "material": "silver"},
+    {"type": "band ring", "country": "neutral", "material": "metal"},
+    {"type": "championship ring", "country": "neutral", "material": "gold"},
+    {"type": "mood ring", "country": "neutral", "material": "metal"},
+    {"type": "skull ring", "country": "neutral", "material": "silver"},
+    {"type": "gemstone ring", "country": "neutral", "material": "gold"},
+    {"type": "titanium ring", "country": "neutral", "material": "titanium"},
+    {"type": "wooden ring", "country": "neutral", "material": "wood"},
+    {"type": "rubber ring", "country": "neutral", "material": "rubber"},
+    {"type": "knuckle ring", "country": "neutral", "material": "metal"},
+    {"type": "bare fingers", "country": "neutral", "material": "none"}
+  ]
+}

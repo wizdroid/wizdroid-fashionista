@@ -1,0 +1,18 @@
+{
+  "makeup_colors": [
+    "none", "red", "pink", "peach", "nude", "berry", "coral", "rose", "brown", "black", "clear", 
+    "gold", "silver", "bronze", "taupe", "smoky", "colorful", "white", "purple", "blue", "green", 
+    "yellow", "orange", "maroon", "magenta", "cyan", "lime", "navy", "olive", "teal", "gray", 
+    "light", "medium", "dark", "deep", "bright", "matte", "glossy", "metallic", "shimmer", 
+    "natural", "warm", "cool", "neutral", "transparent", "opaque", "sheer"
+  ],
+  "makeup_intensities": [
+    "none", "light", "medium", "heavy"
+  ],
+  "accessory_materials": [
+    "none", "gold", "silver", "leather", "fabric", "plastic", "wood", "pearl", "diamond", 
+    "tattoo ink", "henna", "steel", "gemstone", "bronze", "copper", "titanium", "ceramic", 
+    "rubber", "silk", "cotton", "lace", "velvet", "suede", "canvas", "denim", "linen", 
+    "wool", "cashmere", "fur", "feather", "bamboo", "crystal", "glass", "marble", "stone"
+  ]
+}

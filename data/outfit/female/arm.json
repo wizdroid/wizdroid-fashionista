@@ -1,0 +1,28 @@
+{
+  "body_part": "arm",
+  "attire": [
+    {"type": "bangles", "country": "India", "material": "glass"},
+    {"type": "bracelet", "country": "neutral", "material": "silver"},
+    {"type": "armlet", "country": "India", "material": "gold"},
+    {"type": "arm warmers", "country": "neutral", "material": "wool"},
+    {"type": "vambrace", "country": "neutral", "material": "leather"},
+    {"type": "manilla", "country": "West Africa", "material": "bronze"},
+    {"type": "watch", "country": "neutral", "material": "metal"},
+    {"type": "charm bracelet", "country": "neutral", "material": "silver"},
+    {"type": "tennis bracelet", "country": "neutral", "material": "diamond"},
+    {"type": "cuff bracelet", "country": "neutral", "material": "gold"},
+    {"type": "chain bracelet", "country": "neutral", "material": "gold"},
+    {"type": "leather bracelet", "country": "neutral", "material": "leather"},
+    {"type": "friendship bracelet", "country": "neutral", "material": "thread"},
+    {"type": "pearl bracelet", "country": "neutral", "material": "pearl"},
+    {"type": "fitness tracker", "country": "neutral", "material": "silicone"},
+    {"type": "smart watch", "country": "neutral", "material": "metal"},
+    {"type": "armband", "country": "neutral", "material": "fabric"},
+    {"type": "compression sleeve", "country": "neutral", "material": "spandex"},
+    {"type": "arm tattoo", "country": "neutral", "material": "ink"},
+    {"type": "temporary tattoo", "country": "neutral", "material": "ink"},
+    {"type": "arm band", "country": "neutral", "material": "elastic"},
+    {"type": "sweatband", "country": "neutral", "material": "fabric"},
+    {"type": "bare arms", "country": "neutral", "material": "none"}
+  ]
+}

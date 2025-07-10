@@ -1,0 +1,12 @@
+{
+  "age_groups": [
+    "baby (0-2 years)",
+    "toddler (2-4 years)",
+    "child (5-12 years)",
+    "teenager (13-19 years)",
+    "young adult (20-29 years)",
+    "adult (30-45 years)",
+    "middle-aged (46-59 years)",
+    "senior (60+ years)"
+  ]
+}

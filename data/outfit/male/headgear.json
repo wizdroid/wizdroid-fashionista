@@ -1,0 +1,25 @@
+{
+  "body_part": "headgear",
+  "attire": [
+    {"type": "baseball cap", "country": "neutral", "material": "cotton"},
+    {"type": "beanie", "country": "neutral", "material": "wool"},
+    {"type": "fedora", "country": "neutral", "material": "felt"},
+    {"type": "panama hat", "country": "Panama", "material": "straw"},
+    {"type": "bowler hat", "country": "UK", "material": "felt"},
+    {"type": "beret", "country": "France", "material": "wool"},
+    {"type": "newsboy cap", "country": "neutral", "material": "tweed"},
+    {"type": "trucker hat", "country": "USA", "material": "mesh"},
+    {"type": "snapback", "country": "neutral", "material": "cotton"},
+    {"type": "bucket hat", "country": "neutral", "material": "cotton"},
+    {"type": "boater hat", "country": "neutral", "material": "straw"},
+    {"type": "top hat", "country": "UK", "material": "felt"},
+    {"type": "cowboy hat", "country": "USA", "material": "felt"},
+    {"type": "flat cap", "country": "UK", "material": "tweed"},
+    {"type": "military beret", "country": "neutral", "material": "wool"},
+    {"type": "ski hat", "country": "neutral", "material": "knit"},
+    {"type": "sun hat", "country": "neutral", "material": "straw"},
+    {"type": "visor", "country": "neutral", "material": "plastic"},
+    {"type": "helmet", "country": "neutral", "material": "various"},
+    {"type": "headband", "country": "neutral", "material": "fabric"}
+  ]
+}

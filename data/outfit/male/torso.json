@@ -1,0 +1,30 @@
+{
+  "body_part": "torso",
+  "attire": [
+    {"type": "dress shirt", "country": "neutral", "material": "cotton"},
+    {"type": "t-shirt", "country": "neutral", "material": "cotton"},
+    {"type": "polo shirt", "country": "neutral", "material": "cotton"},
+    {"type": "tank top", "country": "neutral", "material": "cotton"},
+    {"type": "sweater", "country": "neutral", "material": "wool"},
+    {"type": "cardigan", "country": "neutral", "material": "wool"},
+    {"type": "hoodie", "country": "neutral", "material": "cotton"},
+    {"type": "blazer", "country": "neutral", "material": "wool"},
+    {"type": "suit jacket", "country": "neutral", "material": "wool"},
+    {"type": "tuxedo jacket", "country": "neutral", "material": "wool"},
+    {"type": "vest", "country": "neutral", "material": "various"},
+    {"type": "waistcoat", "country": "UK", "material": "wool"},
+    {"type": "button-up shirt", "country": "neutral", "material": "cotton"},
+    {"type": "henley shirt", "country": "neutral", "material": "cotton"},
+    {"type": "flannel shirt", "country": "neutral", "material": "cotton"},
+    {"type": "denim shirt", "country": "neutral", "material": "denim"},
+    {"type": "golf shirt", "country": "neutral", "material": "polyester"},
+    {"type": "rugby shirt", "country": "neutral", "material": "cotton"},
+    {"type": "thermal shirt", "country": "neutral", "material": "cotton"},
+    {"type": "muscle shirt", "country": "neutral", "material": "cotton"},
+    {"type": "kimono", "country": "Japan", "material": "silk"},
+    {"type": "kurta", "country": "India", "material": "cotton"},
+    {"type": "dashiki", "country": "West Africa", "material": "cotton"},
+    {"type": "guayabera", "country": "Cuba", "material": "cotton"},
+    {"type": "sarong", "country": "Southeast Asia", "material": "cotton"}
+  ]
+}

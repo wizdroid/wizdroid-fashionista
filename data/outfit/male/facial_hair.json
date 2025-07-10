@@ -1,0 +1,25 @@
+{
+  "body_part": "facial_hair",
+  "attire": [
+    {"type": "full beard", "country": "neutral", "description": "complete beard covering cheeks, chin, and jaw"},
+    {"type": "goatee", "country": "neutral", "description": "hair on the chin only"},
+    {"type": "mustache", "country": "neutral", "description": "hair on the upper lip"},
+    {"type": "soul patch", "country": "neutral", "description": "small patch of hair below the lower lip"},
+    {"type": "handlebar mustache", "country": "neutral", "description": "mustache with curved, waxed ends"},
+    {"type": "van dyke", "country": "neutral", "description": "goatee with mustache, no connection"},
+    {"type": "imperial", "country": "neutral", "description": "mustache with an upward curl"},
+    {"type": "horseshoe mustache", "country": "neutral", "description": "mustache extending down to the jaw"},
+    {"type": "chinstrap", "country": "neutral", "description": "beard along the jawline"},
+    {"type": "five o'clock shadow", "country": "neutral", "description": "light stubble"},
+    {"type": "stubble", "country": "neutral", "description": "short, rough beard growth"},
+    {"type": "sideburns", "country": "neutral", "description": "hair extending down the sides of the face"},
+    {"type": "mutton chops", "country": "neutral", "description": "large sideburns"},
+    {"type": "friendly chops", "country": "neutral", "description": "sideburns connected to mustache"},
+    {"type": "anchor beard", "country": "neutral", "description": "beard shaped like an anchor"},
+    {"type": "balbo", "country": "neutral", "description": "beard without sideburns"},
+    {"type": "circle beard", "country": "neutral", "description": "mustache and goatee connected"},
+    {"type": "extended goatee", "country": "neutral", "description": "goatee with mustache connection"},
+    {"type": "fu manchu", "country": "neutral", "description": "long, thin mustache extending down"},
+    {"type": "clean shaven", "country": "neutral", "description": "no facial hair"}
+  ]
+}

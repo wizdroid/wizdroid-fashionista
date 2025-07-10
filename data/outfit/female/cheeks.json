@@ -1,0 +1,15 @@
+{
+  "body_part": "cheeks",
+  "attire": [
+    {"type": "natural flush", "country": "neutral", "description": "natural rosy cheeks"},
+    {"type": "freckles", "country": "neutral", "description": "natural freckles"},
+    {"type": "dimples", "country": "neutral", "description": "natural dimples"},
+    {"type": "cheek piercing", "country": "neutral"},
+    {"type": "face tattoo", "country": "neutral"},
+    {"type": "face paint", "country": "neutral"},
+    {"type": "tribal markings", "country": "various"},
+    {"type": "scar", "country": "neutral", "description": "natural or decorative scar"},
+    {"type": "birthmark", "country": "neutral", "description": "natural birthmark"},
+    {"type": "smooth cheeks", "country": "neutral", "description": "clear, smooth skin"}
+  ]
+}

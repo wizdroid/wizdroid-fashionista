@@ -1,0 +1,31 @@
+{
+  "body_part": "forehead",
+  "attire": [
+    {"type": "bindi", "country": "India", "material": "kumkum"},
+    {"type": "vibhuti", "country": "India", "material": "sacred ash"},
+    {"type": "tilak", "country": "India", "material": "sandalwood paste"},
+    {"type": "maang tikka", "country": "India", "material": "gold"},
+    {"type": "sindoor", "country": "India", "material": "vermilion"},
+    {"type": "forehead tattoo", "country": "neutral", "material": "ink"},
+    {"type": "temporary tattoo", "country": "neutral", "material": "ink"},
+    {"type": "henna design", "country": "India", "material": "henna"},
+    {"type": "face gems", "country": "neutral", "material": "crystal"},
+    {"type": "face jewels", "country": "neutral", "material": "rhinestone"},
+    {"type": "headband", "country": "neutral", "material": "fabric"},
+    {"type": "sweatband", "country": "neutral", "material": "fabric"},
+    {"type": "bandage", "country": "neutral", "material": "fabric"},
+    {"type": "face paint", "country": "neutral", "material": "paint"},
+    {"type": "war paint", "country": "various", "material": "paint"},
+    {"type": "tribal markings", "country": "various", "material": "paint"},
+    {"type": "festival paint", "country": "India", "material": "gulal"},
+    {"type": "makeup highlight", "country": "neutral", "material": "cosmetic"},
+    {"type": "concealer", "country": "neutral", "material": "cosmetic"},
+    {"type": "foundation", "country": "neutral", "material": "cosmetic"},
+    {"type": "scar", "country": "neutral", "material": "skin"},
+    {"type": "birthmark", "country": "neutral", "material": "skin"},
+    {"type": "freckles", "country": "neutral", "material": "skin"},
+    {"type": "wrinkles", "country": "neutral", "material": "skin"},
+    {"type": "smooth forehead", "country": "neutral", "material": "skin"},
+    {"type": "bare forehead", "country": "neutral", "material": "none"}
+  ]
+}

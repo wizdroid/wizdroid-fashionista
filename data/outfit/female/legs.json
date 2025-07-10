@@ -1,0 +1,25 @@
+{
+  "body_part": "legs",
+  "attire": [
+    {"type": "leggings", "country": "neutral", "material": "cotton"},
+    {"type": "yoga pants", "country": "neutral", "material": "spandex"},
+    {"type": "dhoti", "country": "India", "material": "cotton"},
+    {"type": "ghagra", "country": "India", "material": "silk"},
+    {"type": "lungi", "country": "India", "material": "cotton"},
+    {"type": "jeans", "country": "neutral", "material": "denim"},
+    {"type": "leggings for chudidar", "country": "India", "material": "cotton"},
+    {"type": "leggings for sherwani", "country": "India", "material": "silk"},
+    {"type": "palazzo pants", "country": "neutral", "material": "crepe"},
+    {"type": "culottes", "country": "France", "material": "linen"},
+    {"type": "sarong", "country": "Southeast Asia", "material": "rayon"},
+    {"type": "tights", "country": "neutral", "material": "nylon"},
+    {"type": "harem pants", "country": "Middle East", "material": "cotton"},
+    {"type": "pencil skirt", "country": "neutral", "material": "wool"},
+    {"type": "mini skirt", "country": "neutral", "material": "denim"},
+    {"type": "maxi skirt", "country": "neutral", "material": "cotton"},
+    {"type": "pleated skirt", "country": "neutral", "material": "polyester"},
+    {"type": "wrap skirt", "country": "neutral", "material": "linen"},
+    {"type": "dirndl skirt", "country": "Germany", "material": "cotton"},
+    {"type": "sarong skirt", "country": "Southeast Asia", "material": "rayon"}
+  ]
+}

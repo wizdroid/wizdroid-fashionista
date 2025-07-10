@@ -1,0 +1,29 @@
+{
+  "body_part": "hand",
+  "attire": [
+    {"type": "henna", "country": "India"},
+    {"type": "gloves", "country": "neutral"},
+    {"type": "leather gloves", "country": "neutral"},
+    {"type": "surgical gloves", "country": "neutral"},
+    {"type": "wedding gloves", "country": "neutral"},
+    {"type": "mittens", "country": "neutral"},
+    {"type": "fingerless gloves", "country": "neutral"},
+    {"type": "gauntlets", "country": "neutral"},
+    {"type": "oven mitts", "country": "neutral"},
+    {"type": "evening gloves", "country": "neutral"},
+    {"type": "opera gloves", "country": "neutral"},
+    {"type": "driving gloves", "country": "neutral"},
+    {"type": "winter gloves", "country": "neutral"},
+    {"type": "work gloves", "country": "neutral"},
+    {"type": "gardening gloves", "country": "neutral"},
+    {"type": "cycling gloves", "country": "neutral"},
+    {"type": "rubber gloves", "country": "neutral"},
+    {"type": "medical gloves", "country": "neutral"},
+    {"type": "disposable gloves", "country": "neutral"},
+    {"type": "compression gloves", "country": "neutral"},
+    {"type": "heated gloves", "country": "neutral"},
+    {"type": "nail art", "country": "neutral"},
+    {"type": "temporary tattoo", "country": "neutral"},
+    {"type": "bare hands", "country": "neutral"}
+  ]
+}

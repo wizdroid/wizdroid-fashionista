@@ -1,0 +1,31 @@
+{
+  "body_part": "nose",
+  "attire": [
+    {"type": "nose ring", "country": "neutral", "material": "gold"},
+    {"type": "tribal nose ring", "country": "Africa", "material": "bronze"},
+    {"type": "nath", "country": "India", "material": "gold"},
+    {"type": "septum ring", "country": "neutral", "material": "silver"},
+    {"type": "stud", "country": "neutral", "material": "diamond"},
+    {"type": "bulak", "country": "India", "material": "gold"},
+    {"type": "nostril piercing", "country": "neutral", "material": "gold"},
+    {"type": "septum piercing", "country": "neutral", "material": "silver"},
+    {"type": "bridge piercing", "country": "neutral", "material": "metal"},
+    {"type": "high nostril piercing", "country": "neutral", "material": "gold"},
+    {"type": "nasallang piercing", "country": "neutral", "material": "metal"},
+    {"type": "nose bone", "country": "neutral", "material": "bone"},
+    {"type": "nose screw", "country": "neutral", "material": "gold"},
+    {"type": "fishtail nose stud", "country": "neutral", "material": "silver"},
+    {"type": "L-shaped nose stud", "country": "neutral", "material": "gold"},
+    {"type": "nose chain", "country": "India", "material": "gold"},
+    {"type": "magnetic nose ring", "country": "neutral", "material": "metal"},
+    {"type": "fake nose ring", "country": "neutral", "material": "metal"},
+    {"type": "nose cuff", "country": "neutral", "material": "gold"},
+    {"type": "nose guard", "country": "neutral", "material": "plastic"},
+    {"type": "nose clip", "country": "neutral", "material": "metal"},
+    {"type": "glasses", "country": "neutral", "material": "plastic"},
+    {"type": "sunglasses", "country": "neutral", "material": "plastic"},
+    {"type": "nose freckles", "country": "neutral", "material": "makeup"},
+    {"type": "nose contour", "country": "neutral", "material": "makeup"},
+    {"type": "bare nose", "country": "neutral", "material": "none"}
+  ]
+}

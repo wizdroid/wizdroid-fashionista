@@ -1,0 +1,20 @@
+{
+  "body_part": "arm",
+  "attire": [
+    {"type": "watch", "country": "neutral", "material": "metal"},
+    {"type": "bracelet", "country": "neutral", "material": "metal"},
+    {"type": "armband", "country": "neutral", "material": "fabric"},
+    {"type": "fitness tracker", "country": "neutral", "material": "silicon"},
+    {"type": "leather bracelet", "country": "neutral", "material": "leather"},
+    {"type": "chain bracelet", "country": "neutral", "material": "gold"},
+    {"type": "cuff", "country": "neutral", "material": "metal"},
+    {"type": "sweatband", "country": "neutral", "material": "fabric"},
+    {"type": "sleeve garters", "country": "neutral", "material": "elastic"},
+    {"type": "arm warmer", "country": "neutral", "material": "knit"},
+    {"type": "compression sleeve", "country": "neutral", "material": "spandex"},
+    {"type": "tattoo sleeve", "country": "neutral", "material": "fabric"},
+    {"type": "elbow pad", "country": "neutral", "material": "foam"},
+    {"type": "ID bracelet", "country": "neutral", "material": "metal"},
+    {"type": "bare arms", "country": "neutral", "material": "none"}
+  ]
+}
