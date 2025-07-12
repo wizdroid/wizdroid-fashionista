@@ -1,5 +1,10 @@
 # ComfyUI Outfit Selection
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![ComfyUI](https://img.shields.io/badge/ComfyUI-Compatible-brightgreen.svg)](https://github.com/comfyanonymous/ComfyUI)
+[![GitHub release](https://img.shields.io/github/release/manifestations/comfyui-outfit.svg)](https://github.com/manifestations/comfyui-outfit/releases)
+
 A comprehensive outfit generation system for ComfyUI with AI-powered prompt enhancement and dynamic outfit composition.
 
 ## 🎯 Features
@@ -27,11 +32,11 @@ A comprehensive outfit generation system for ComfyUI with AI-powered prompt enha
 ### Method 1: Git Clone (Recommended)
 ```bash
 cd ComfyUI/custom_nodes/
-git clone https://github.com/yourusername/comfyui-outfit.git
+git clone https://github.com/manifestations/comfyui-outfit.git
 ```
 
 ### Method 2: Manual Download
-1. Download the latest release from the [Releases](https://github.com/yourusername/comfyui-outfit/releases) page
+1. Download the latest release from the [Releases](https://github.com/manifestations/comfyui-outfit/releases) page
 2. Extract to `ComfyUI/custom_nodes/comfyui-outfit/`
 
 ### Method 3: ComfyUI Manager

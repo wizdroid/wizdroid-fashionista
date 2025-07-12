@@ -50,7 +50,7 @@ jobs:
           ### Method 1: Git Clone
           ```bash
           cd ComfyUI/custom_nodes/
-          git clone https://github.com/yourusername/comfyui-outfit.git
+          git clone https://github.com/manifestations/comfyui-outfit.git
           ```
           
           ### Method 2: Manual Download
