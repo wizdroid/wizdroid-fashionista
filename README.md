@@ -1,53 +1,76 @@
-# ComfyUI Outfit Nodes
+# ComfyUI Outfit Selection
 
-Advanced, professional outfit and makeup generation nodes for ComfyUI, with dynamic UI and AI-powered prompt formatting.
+A comprehensive outfit generation system for ComfyUI with AI-powered prompt enhancement and dynamic outfit composition.
 
-## Features
+## 🎯 Features
 
-- **Dynamic Outfit Generation**: Customizable nodes for male and female characters
-- **Dynamic Makeup & Accessories**: Add/remove/enable/disable multiple makeup and accessory/tattoo items, each with color/material selection
-- **Gender-Specific Poses**: Loads poses and options based on selected gender
-- **AI-Powered Descriptions**: Simple Ollama Node generates vivid, natural prompts (SDXL/Flux) with detailed makeup, body shape, and clothing descriptions
-- **Modern UI**: User-friendly, dynamic controls for all options
+### 👗 Dynamic Outfit Generation
+- **Female & Male Outfit Nodes**: Generate complete outfits with randomization
+- **Extensive Customization**: 20+ outfit categories (torso, legs, feet, accessories, etc.)
+- **Smart Randomization**: Intelligent random selection with seed control
+- **JSON-Based Data**: Easily customizable outfit options via JSON files
 
-## Installation
+### 🤖 AI-Powered Prompt Enhancement
+- **Ollama LLM Integration**: Enhance prompts with local AI models
+- **Vision Node Support**: Describe images using vision-language models
+- **Flexible Styling**: Multiple prompt styles and creative modes
+- **Professional Quality**: Production-ready prompt generation
 
-1. Place this folder in your ComfyUI `custom_nodes` directory:
-   ```
-   ComfyUI/custom_nodes/comfyui-outfit/
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Restart ComfyUI
+### 🎨 Advanced Customization
+- **Seed Management**: Fixed, random, increment, and decrement modes
+- **Style Controls**: Art styles, lighting, cameras, and more
+- **Background Options**: Diverse scene and environment settings
+- **Age & Demographics**: Comprehensive character customization
 
-## Main Nodes
+## 📦 Installation
 
-- **Female Outfit Node**: Full female character outfit, makeup, and accessories
-- **Male Outfit Node**: Full male character outfit and accessories
-- **Simple Ollama Node**: AI prompt generator (SDXL/Flux styles, vivid makeup/body/clothing descriptions)
-- **Ollama Vision Node**: (Optional) AI image analysis for outfit suggestions
+### Method 1: Git Clone (Recommended)
+```bash
+cd ComfyUI/custom_nodes/
+git clone https://github.com/yourusername/comfyui-outfit.git
+```
 
-## Usage
+### Method 2: Manual Download
+1. Download the latest release from the [Releases](https://github.com/yourusername/comfyui-outfit/releases) page
+2. Extract to `ComfyUI/custom_nodes/comfyui-outfit/`
 
-1. Add a Female or Male Outfit Node to your workflow
-2. Configure attributes (body type, pose, background, etc.)
-3. Use the dynamic UI to add makeup and accessories/tattoos, selecting color/material for each
-4. Connect to the Simple Ollama Node for advanced prompt formatting
-5. Use "random" for any attribute to randomize
+### Method 3: ComfyUI Manager
+1. Open ComfyUI Manager
+2. Search for "ComfyUI Outfit Selection"
+3. Click Install
 
-## Data Structure
+## 🚀 Quick Start
 
-- All options are in `data/outfit/female/` and `data/outfit/male/` (JSON)
-- Shared options (colors, intensities, materials) in `data/makeup.json`
-- Gender-specific poses in `data/outfit/female/poses.json` and `data/outfit/male/poses.json`
+### Basic Usage
+1. Start ComfyUI
+2. Look for nodes under **👗 Outfit** category:
+   - **Female Outfit Node**: Generate female outfits
+   - **Male Outfit Node**: Generate male outfits
+   - **Ollama Prompter**: Enhance prompts with AI
+   - **Simple Ollama**: Basic prompt enhancement
 
-## Troubleshooting
+### Example Workflow
+```
+[Female Outfit Node] → [Text Output] → [Your Image Generation Model]
+```
 
-- **UI not updating**: Restart ComfyUI after updates
-- **Missing options**: Check JSON files in `data/`
-- **AI nodes not working**: Ensure Ollama is installed and running locally
+## 📋 Requirements
+
+### Core Requirements
+- ComfyUI (latest version)
+- Python 3.8+
+
+### Optional Dependencies
+For AI prompt enhancement features:
+```bash
+pip install requests pillow numpy torch
+```
+
+For vision node support:
+```bash
+# Install Ollama locally
+# Download vision models (llava, moondream, etc.)
+```
 
 ## License
 

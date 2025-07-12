@@ -1,10 +1,16 @@
 {
   "name": "comfyui-outfit",
-  "version": "1.1.0",
-  "description": "A dynamic ComfyUI custom node for AI-friendly outfit selection with color-aware dropdowns and bias-free output",
+  "version": "2.0.0",
+  "description": "A comprehensive outfit generation system for ComfyUI with AI-powered prompt enhancement and dynamic outfit composition",
   "main": "dynamic_outfit_node.py",
   "scripts": {
-    "test": "python -m unittest test_dynamic_outfit_updated.py -v && python test_functional.py"
+    "test": "python -m pytest tests/",
+    "test:coverage": "python -m pytest tests/ --cov=utils --cov=support_nodes --cov-report=html",
+    "lint": "flake8 . && pylint utils/ support_nodes/",
+    "format": "black . && isort .",
+    "type-check": "mypy .",
+    "security": "bandit -r .",
+    "quality": "npm run format && npm run lint && npm run type-check && npm run security"
   },
   "repository": {
     "type": "git",
@@ -17,9 +23,14 @@
     "fashion",
     "image-generation",
     "custom-node",
-    "stable-diffusion"
+    "stable-diffusion",
+    "ollama",
+    "prompt-enhancement",
+    "machine-learning",
+    "computer-vision",
+    "character-generation"
   ],
-  "author": "Your Name",
+  "author": "ComfyUI Outfit Team",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/yourusername/comfyui-outfit/issues"
