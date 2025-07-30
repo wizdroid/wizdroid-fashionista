@@ -102,13 +102,13 @@ class OptimizedOllamaLLMNode:
     def INPUT_TYPES(cls) -> Dict[str, Any]:
         """
         Defines the input fields for the ComfyUI node.
-        Advanced users can extend or modify the JSON files for custom workflows.
+        Adds a dropdown for description prompt style (SDXL/Flux).
         """
         styles_data = cls._load_styles_data()
         scene_highlights = styles_data["scene_highlights"]
         detail_scales = styles_data["detail_scales"]
         creative_modes = styles_data["creative_modes"]
-        
+
         # Standard prompt styles
         prompt_styles = [
             "none",
@@ -118,10 +118,13 @@ class OptimizedOllamaLLMNode:
             "surreal",
             "minimalist",
         ]
-        
+
+        # Description prompt style dropdown
+        description_prompt_styles = ["sdxl", "flux"]
+
         # Get available models
         installed_models = get_ollama_models("http://127.0.0.1:11434/api/generate")
-        
+
         return {
             "required": {
                 "keywords": ("STRING", {"multiline": True, "default": ""}),
@@ -130,6 +133,7 @@ class OptimizedOllamaLLMNode:
                     {"default": "disabled"},
                 ),
                 "prompt_style": (prompt_styles, {"default": "none"}),
+                "description_prompt_style": (description_prompt_styles, {"default": "sdxl"}),
                 "scene_mood": (
                     ["none"] + scene_highlights.get("moods", []),
                     {"default": "none"},
@@ -201,26 +205,32 @@ class OptimizedOllamaLLMNode:
         detail_scale: str,
         creative_mode: str,
         styles_data: Dict[str, Any],
+        description_prompt_style: str = "sdxl"
     ) -> str:
-        """Build the system prompt for the LLM."""
+        """Build the system prompt for the LLM, using description prompt style (SDXL/Flux)."""
+        # Load description prompt instructions
+        desc_path = os.path.join(self._get_data_directory(), "styles", "description_prompts.json")
+        desc_data = load_json_file(desc_path, {})
+        desc = desc_data.get(description_prompt_style, {})
+        desc_instructions = desc.get("instructions", "")
+        desc_example = desc.get("example", "")
+
         system_components = [
-            "Focus exclusively on constructing a detailed, artistic prompt for image generation.",
-            "Do not include meta-commentary or statements about AI capabilities.",
-            "Utilize precise, vivid, and professional language suitable for advanced image generation workflows.",
+            desc_instructions,
+            f"Example: {desc_example}" if desc_example else "",
             styles_data["scale_instructions"].get(detail_scale, ""),
             styles_data["creative_mode_instructions"].get(creative_mode, ""),
         ]
-        
         if prompt_style != "none":
             system_components.append(f"Prompt style: {prompt_style}")
-        
-        return self.build_system_prompt(system_components)
+        return self.build_system_prompt([c for c in system_components if c])
 
     def generate_prompt(
         self,
         keywords: str,
         model_name: str = "disabled",
         prompt_style: str = "none",
+        description_prompt_style: str = "sdxl",
         scene_mood: str = "none",
         scene_time: str = "none",
         scene_weather: str = "none",
@@ -237,22 +247,22 @@ class OptimizedOllamaLLMNode:
         # Set seed for reproducibility
         if seed > 0:
             random.seed(seed)
-        
+
         # Build base prompt
         base_prompt = self._build_base_prompt(
             keywords, custom_prompt, scene_mood, scene_time, scene_weather, color_scheme
         )
-        
+
         # Return base prompt if model is disabled or no keywords
         if model_name == "disabled" or not base_prompt:
             return (base_prompt,)
-        
+
         # Load styles data and build system prompt
         styles_data = self._load_styles_data()
         system_prompt = self._build_system_prompt(
-            prompt_style, detail_scale, creative_mode, styles_data
+            prompt_style, detail_scale, creative_mode, styles_data, description_prompt_style
         )
-        
+
         # Prepare API payload
         payload = {
             "model": model_name,
@@ -261,17 +271,17 @@ class OptimizedOllamaLLMNode:
             "stream": False,
             "options": {"seed": seed},
         }
-        
+
         # Make API call
         response_data = self.make_ollama_request(ollama_url, payload)
-        
+
         if response_data is None:
             return (f"ERROR: Could not connect to Ollama at {ollama_url}",)
-        
+
         # Extract and clean response
         enhanced_prompt = response_data.get("response", "").strip().strip('"').strip("'")
-        
+
         if not enhanced_prompt:
             return (f"ERROR: Empty response from model {model_name}",)
-        
+
         return (enhanced_prompt,)

@@ -1,1 +1,10 @@
-{"instructions": "Describe the image in detail, focusing on composition, subject, color, lighting, and mood. Use professional, vivid, and concise language suitable for advanced image analysis."}
+{
+	"sdxl": {
+		"instructions": "Describe the image in detail, focusing on composition, subject, color, lighting, and mood. Use professional, vivid, and concise language suitable for advanced image analysis. Use comma-separated descriptive phrases. Use parentheses () to increase emphasis and brackets [] to decrease emphasis on specific words or phrases. You may also use numerical weights, e.g., (red flower:1.5) or [blue sky:0.5], to further control importance. Keep prompts under 200 tokens for optimal performance. Do not include explanations or meta-commentary. Output only the prompt without any additional text.",
+		"example": "A (photorealistic:1.2) portrait of an (elderly man:1.3), (wrinkled face), deep blue eyes, (soft window light:1.2), [distracting background:0.5], warm color palette, contemplative mood, shallow depth of field, (painterly style:1.1)."
+	},
+	"flux": {
+		"instructions": "Describe the image with a highly specific, natural, and vivid scene. Start with the main subject, then describe the environment, background, and any relevant objects. Be concrete and unambiguous: specify colors, clothing, actions, and scene details. Include style, lighting, and mood if provided or implied. Use complete, natural sentences that read like a scene from a novel. Avoid vague adjectives (like 'nice', 'beautiful'); use precise, descriptive language. Keep the prompt under 100 tokens for optimal performance. Output only the prompt without any additional text.",
+		"example": "A young woman with short black hair sits on a wooden bench in a sunlit park, surrounded by blooming cherry blossom trees. She wears a blue denim jacket and white sneakers, reading a red book. The scene is bright and cheerful, with soft morning light and gentle shadows."
+	}
+}

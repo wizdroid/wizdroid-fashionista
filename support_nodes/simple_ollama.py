@@ -55,7 +55,7 @@ class OptimizedSimpleOllamaNode:
         # Cache models to avoid repeated API calls
         if not hasattr(cls, '_cached_models'):
             cls._cached_models = get_ollama_models("http://127.0.0.1:11434/api/generate")
-        
+
         return {
             "required": {
                 "custom_data": ("STRING", {"multiline": True, "default": ""}),
@@ -64,6 +64,7 @@ class OptimizedSimpleOllamaNode:
             },
             "optional": {
                 "ollama_url": ("STRING", {"default": "http://127.0.0.1:11434/api/generate"}),
+                "seed": ("INT", {"default": 0, "min": 0, "max": 999999}),
             },
         }
 
@@ -79,35 +80,33 @@ class OptimizedSimpleOllamaNode:
         model_name: str = "disabled",
         prompt_style: str = "SDXL",
         ollama_url: str = "http://127.0.0.1:11434/api/generate",
+        seed: int = 0,
     ) -> Tuple[str]:
         """
         Generate formatted prompt based on the selected style.
-        
-        Args:
-            custom_data: Input data to format
-            model_name: Selected Ollama model
-            prompt_style: Formatting style (SDXL/Flux)
-            ollama_url: Ollama API URL
-            
-        Returns:
-            Tuple containing formatted prompt
+        Adds a random seed option for reproducibility/randomness.
         """
+        import random
+        # Set random seed if provided
+        if seed and seed > 0:
+            random.seed(seed)
+
         # Validate inputs
         if not custom_data.strip():
             return ("",)
-        
+
         # Handle disabled model case
         if model_name == "disabled":
             return self._format_without_llm(custom_data, prompt_style)
-        
+
         # Validate model availability
         available_models = get_ollama_models(ollama_url)
         if not self.validate_model_selection(model_name, available_models):
             print(f"[SimpleOllamaNode] Falling back to formatting without LLM")
             return self._format_without_llm(custom_data, prompt_style)
-        
-        # Generate LLM-enhanced prompt
-        return self._generate_llm_prompt(custom_data, model_name, prompt_style, ollama_url)
+
+        # Generate LLM-enhanced prompt, passing seed
+        return self._generate_llm_prompt(custom_data, model_name, prompt_style, ollama_url, seed)
     
     def _format_without_llm(self, custom_data: str, prompt_style: str) -> Tuple[str]:
         """
@@ -138,7 +137,8 @@ class OptimizedSimpleOllamaNode:
         custom_data: str, 
         model_name: str, 
         prompt_style: str, 
-        ollama_url: str
+        ollama_url: str,
+        seed: int = 0
     ) -> Tuple[str]:
         """
         Generate LLM-enhanced prompt.
@@ -164,6 +164,9 @@ class OptimizedSimpleOllamaNode:
             "prompt": custom_data,
             "stream": False,
         }
+        # If seed is provided, add to payload (if Ollama supports it)
+        if seed and seed > 0:
+            payload["options"] = {"seed": seed}
         
         response_data = self.make_ollama_request(ollama_url, payload)
         
@@ -183,7 +186,8 @@ class OptimizedSimpleOllamaNode:
             "Focus on visual details, artistic style, lighting, and composition.",
             "Use comma-separated descriptive phrases.",
             "Keep prompts under 200 tokens for optimal performance.",
-            "Do not include explanations or meta-commentary."
+            "Do not include explanations or meta-commentary.",
+            "Output only the prompt without any additional text.",
         ]
         return self.build_system_prompt(components)
     
@@ -191,10 +195,14 @@ class OptimizedSimpleOllamaNode:
         """Build system prompt for Flux formatting."""
         components = [
             "You are an expert at creating Flux image generation prompts.",
-            "Transform the input into a natural, flowing description suitable for Flux.",
-            "Use complete sentences that read naturally.",
-            "Focus on the overall scene, mood, and atmosphere.",
-            "Keep descriptions concise but evocative.",
-            "Do not include explanations or meta-commentary."
+            "Transform the input into a highly specific, natural, and vivid description suitable for Flux.",
+            "Start with the main subject, then describe the environment, background, and any relevant objects.",
+            "Be concrete and unambiguous: specify colors, clothing, actions, and scene details.",
+            "Include style, lighting, and mood if provided or implied.",
+            "Use complete, natural sentences that read like a scene from a novel.",
+            "Avoid vague adjectives (like 'nice', 'beautiful'); use precise, descriptive language.",
+            "Keep the prompt under 100 tokens for optimal performance.",
+            "Output only the prompt without any additional text or title.",
+            "Example: A young woman with short black hair sits on a wooden bench in a sunlit park, surrounded by blooming cherry blossom trees. She wears a blue denim jacket and white sneakers, reading a red book. The scene is bright and cheerful, with soft morning light and gentle shadows."
         ]
         return self.build_system_prompt(components)
