@@ -25,6 +25,9 @@
     {"type": "bandage"},
     {"type": "arm sleeve"},
     {"type": "UV protection sleeve"},
-    {"type": "bare forearm"}
+    {"type": "bare forearm"},
+    {"type": "tennis bracelet"},
+    {"type": "crystal cuff"},
+    {"type": "bangle stack"}
   ]
 }

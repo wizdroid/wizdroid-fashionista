@@ -33,6 +33,12 @@
     {"type": "qipao", "country": "China", "material": "silk"},
     {"type": "dirndl", "country": "Germany", "material": "cotton"},
     {"type": "dashiki", "country": "West Africa", "material": "cotton"},
-    {"type": "poncho", "country": "South America", "material": "wool"}
+    {"type": "poncho", "country": "South America", "material": "wool"},
+    {"type": "mini dress", "material": "satin"},
+    {"type": "sequin mini dress", "material": "sequin"},
+    {"type": "bodycon dress", "material": "jersey"},
+    {"type": "cocktail dress", "material": "silk"},
+    {"type": "slip dress", "material": "silk"},
+    {"type": "one-shoulder dress", "material": "velvet"}
   ]
 }

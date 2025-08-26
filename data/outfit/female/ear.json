@@ -29,6 +29,8 @@
     {"type": "rook piercing", "material": "metal"},
     {"type": "daith piercing", "material": "metal"},
     {"type": "ear weights", "material": "stone"},
-    {"type": "bare ears", "material": "none"}
+    {"type": "bare ears", "material": "none"},
+    {"type": "diamond studs", "material": "diamond"},
+    {"type": "pearl drop earrings", "material": "pearl"}
   ]
 }

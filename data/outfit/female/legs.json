@@ -20,6 +20,10 @@
     {"type": "pleated skirt", "material": "polyester"},
     {"type": "wrap skirt", "material": "linen"},
     {"type": "dirndl skirt", "country": "Germany", "material": "cotton"},
-    {"type": "sarong skirt", "country": "Southeast Asia", "material": "rayon"}
+    {"type": "sarong skirt", "country": "Southeast Asia", "material": "rayon"},
+    {"type": "sequin skirt", "material": "sequin"},
+    {"type": "leather mini skirt", "material": "leather"},
+    {"type": "sheer tights", "material": "nylon"},
+    {"type": "fishnet tights", "material": "nylon"}
   ]
 }

@@ -31,6 +31,10 @@
     {"type": "moccasins", "country": "Native American", "material": "leather"},
     {"type": "boat shoes", "material": "leather"},
     {"type": "slip-on shoes", "material": "canvas"},
-    {"type": "bare feet", "material": "none"}
+    {"type": "bare feet", "material": "none"},
+    {"type": "strappy stilettos", "material": "leather"},
+    {"type": "platform heels", "material": "synthetic"},
+    {"type": "ankle-strap heels", "material": "leather"},
+    {"type": "metallic pumps", "material": "leather"}
   ]
 }

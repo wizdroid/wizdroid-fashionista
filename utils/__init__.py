@@ -8,6 +8,7 @@ from .common import (
     filter_valid_options,
     load_json_file,
     safe_random_choice,
+    apply_preset,
 )
 from .data_loader import (
     discover_body_parts,
@@ -18,6 +19,7 @@ from .data_loader import (
     load_scene_highlights,
     load_description_styles,
     load_scale_options,
+    load_presets,
 )
 from .prompt_builder import (
     PromptBuilder,
@@ -28,6 +30,7 @@ __all__ = [
     "filter_valid_options",
     "load_json_file",
     "safe_random_choice",
+    "apply_preset",
 
     # Data loading utilities
     "discover_body_parts",
@@ -38,6 +41,7 @@ __all__ = [
     "load_scene_highlights",
     "load_description_styles",
     "load_scale_options",
+    "load_presets",
 
     # Prompt building utilities
     "PromptBuilder",

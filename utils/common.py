@@ -1,7 +1,7 @@
 import json
 import random
 from pathlib import Path
-from typing import Any, List, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 
 
 def load_json_file(file_path: Union[str, Path], default: Any = None) -> Any:
@@ -64,3 +64,17 @@ def filter_valid_options(options: List[str]) -> List[str]:
     
     # Add control values at the beginning
     return ["none", "random"] + valid_options
+
+
+def apply_preset(current: Dict[str, Any], preset: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Apply preset values to a current selection dict, only filling in empty or control values.
+
+    Control values considered empty: "", "none", "random".
+    """
+    result = dict(current)
+    for k, v in preset.items():
+        cur = result.get(k)
+        if cur in (None, "", "none", "random"):
+            result[k] = v
+    return result

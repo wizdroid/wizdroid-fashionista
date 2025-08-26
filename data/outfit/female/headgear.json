@@ -33,6 +33,8 @@
     {"type": "hair pin", "material": "metal"},
     {"type": "pagadi", "country": "India", "material": "cotton"},
     {"type": "barrette", "country": "France", "material": "plastic"},
-    {"type": "hair stick", "country": "China", "material": "wood"}
+    {"type": "hair stick", "country": "China", "material": "wood"},
+    {"type": "crystal hair clip", "material": "crystal"},
+    {"type": "pearl headband", "material": "pearl"}
   ]
 }

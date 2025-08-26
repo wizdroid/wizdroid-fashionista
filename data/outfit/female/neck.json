@@ -27,6 +27,9 @@
     {"type": "necktie"},
     {"type": "bow tie"},
     {"type": "ascot", "country": "UK"},
-    {"type": "bare neck"}
+    {"type": "bare neck"},
+    {"type": "diamond choker"},
+    {"type": "layered gold chains"},
+    {"type": "crystal collar"}
   ]
 }

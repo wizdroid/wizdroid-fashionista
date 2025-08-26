@@ -150,3 +150,14 @@ def load_scale_options(styles_dir: Path) -> List[str]:
     if isinstance(data, dict):
         return filter_valid_options(list(data.keys()))
     return ["none", "random"]
+
+
+def load_presets(data_dir: Path) -> Dict[str, Dict[str, Dict[str, str]]]:
+    """
+    Load presets from data/presets.json structured as {gender: {preset_name: mappings}}.
+
+    Returns a dict mapping gender to preset name to field:value mapping.
+    """
+    file_path = data_dir / "presets.json"
+    data = load_json_file(file_path, {})
+    return data if isinstance(data, dict) else {}

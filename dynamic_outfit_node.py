@@ -10,8 +10,10 @@ from .utils.data_loader import (
     load_scene_highlights,
     load_description_styles,
     load_scale_options,
+    load_presets,
 )
 from .utils.prompt_builder import PromptBuilder
+from .utils.common import apply_preset
 
 
 def create_outfit_node(gender: str):
@@ -34,6 +36,9 @@ def create_outfit_node(gender: str):
     scene_highlights = load_scene_highlights(styles_dir)
     description_styles = load_description_styles(styles_dir)
     scale_options = load_scale_options(styles_dir)
+    presets_all = load_presets(data_dir)
+    gender_presets = sorted(list(presets_all.get(gender, {}).keys())) if isinstance(presets_all, dict) else []
+    preset_options = ["none"] + gender_presets
     
     class DynamicOutfitNode:
         _last_seed = 0
@@ -43,6 +48,7 @@ def create_outfit_node(gender: str):
             """Define node inputs based on loaded data."""
             inputs = {
                 "required": {
+                    "preset": (preset_options, {"default": "none"}),
                     "age_group": (age_groups_options, {"default": "random"}),
                     "character_name": ("STRING", {"default": "", "multiline": False}),
                     "body_type": (body_types_options, {"default": "random"}),
@@ -105,6 +111,13 @@ def create_outfit_node(gender: str):
                 use_seed = seed
             
             print(f"[{self.__class__.__name__}] Using seed: {use_seed} (mode: {seed_mode})")
+
+            # Apply preset if selected (fills only empty/none/random fields)
+            selected_preset = kwargs.get("preset", "none")
+            if selected_preset and selected_preset != "none":
+                preset_map = presets_all.get(gender, {}).get(selected_preset, {})
+                if isinstance(preset_map, dict):
+                    kwargs = apply_preset(kwargs, preset_map)
 
             # Consolidate all options for the prompt builder
             all_options = {

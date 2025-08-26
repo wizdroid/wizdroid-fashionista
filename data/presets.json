@@ -1,0 +1,112 @@
+{
+  "female": {
+    "Glam Party": {
+      "torso": "sequin mini dress",
+      "legs": "sheer tights",
+      "feet": "strappy stilettos",
+      "headgear": "crystal hair clip",
+      "neck": "diamond choker",
+      "ear": "diamond studs",
+      "fingers": "diamond cocktail ring",
+      "hand": "red manicure",
+      "waist": "jeweled belt",
+      "background": "Classic ballroom",
+      "pose": "Standing with one hand on hip",
+      "mood": "dramatic",
+      "time_of_day": "night",
+      "color_scheme": "warm tones",
+      "makeup_data": "[{\"type\":\"lipstick\",\"color\":\"red\",\"intensity\":\"heavy\",\"enabled\":true},{\"type\":\"eyeshadow\",\"color\":\"smoky\",\"intensity\":\"medium\",\"enabled\":true},{\"type\":\"eyeliner\",\"color\":\"black\",\"intensity\":\"medium\",\"enabled\":true},{\"type\":\"mascara\",\"color\":\"black\",\"intensity\":\"heavy\",\"enabled\":true},{\"type\":\"highlighter\",\"color\":\"light\",\"intensity\":\"medium\",\"enabled\":true},{\"type\":\"blush\",\"color\":\"rose\",\"intensity\":\"light\",\"enabled\":true}]"
+    },
+    "Beach Day": {
+      "torso": "camisole",
+      "legs": "sarong skirt",
+      "feet": "flip-flops",
+      "headgear": "sun hat",
+      "ear": "hoop earrings",
+      "background": "Beach boardwalk",
+      "pose": "Holding hat with both hands",
+      "mood": "bright",
+      "time_of_day": "afternoon",
+      "color_scheme": "warm tones",
+      "makeup_data": "[{\"type\":\"lip gloss\",\"color\":\"clear\",\"intensity\":\"light\",\"enabled\":true},{\"type\":\"bronzer\",\"color\":\"warm\",\"intensity\":\"light\",\"enabled\":true},{\"type\":\"mascara\",\"color\":\"black\",\"intensity\":\"light\",\"enabled\":true},{\"type\":\"highlighter\",\"color\":\"light\",\"intensity\":\"light\",\"enabled\":true}]"
+    },
+    
+    "Fitness Studio": {
+      "torso": "sports bra",
+      "legs": "leggings",
+      "feet": "running shoes",
+      "headgear": "headband",
+      "background": "Industrial warehouse",
+      "pose": "Standing with arms raised gracefully",
+      "mood": "dynamic",
+      "time_of_day": "morning",
+      "color_scheme": "cool tones",
+      "makeup_data": "[{\"type\":\"no makeup\",\"enabled\":true}]"
+    },
+    
+    "Indian Wedding": {
+      "torso": "sari blouse",
+      "legs": "ghagra",
+      "feet": "sandals",
+      "headgear": "dupatta",
+      "neck": "mangalsutra",
+      "ear": "jhumka",
+      "fingers": "wedding ring",
+      "hand": "henna",
+      "waist": "waist chain",
+      "background": "Ancient temple courtyard",
+      "pose": "Twirl with skirt",
+      "mood": "euphoric",
+      "time_of_day": "sunset",
+      "color_scheme": "vibrant",
+      "makeup_data": "[{\"type\":\"lipstick\",\"color\":\"red\",\"intensity\":\"heavy\",\"enabled\":true},{\"type\":\"eyeshadow\",\"color\":\"gold\",\"intensity\":\"medium\",\"enabled\":true},{\"type\":\"eyeliner\",\"color\":\"black\",\"intensity\":\"heavy\",\"enabled\":true},{\"type\":\"mascara\",\"color\":\"black\",\"intensity\":\"heavy\",\"enabled\":true},{\"type\":\"highlighter\",\"color\":\"warm\",\"intensity\":\"medium\",\"enabled\":true},{\"type\":\"blush\",\"color\":\"rose\",\"intensity\":\"medium\",\"enabled\":true}]"
+    },
+    
+    "Western Wedding": {
+      "torso": "slip dress",
+      "legs": "sheer tights",
+      "feet": "pumps",
+      "headgear": "veil",
+      "neck": "pearl necklace",
+      "ear": "pearl drop earrings",
+      "fingers": "wedding ring",
+      "hand": "wedding gloves",
+      "background": "Classic ballroom",
+      "pose": "Over-the-shoulder look",
+      "mood": "serene",
+      "time_of_day": "afternoon",
+      "color_scheme": "monochromatic",
+      "makeup_data": "[{\"type\":\"lipstick\",\"color\":\"nude\",\"intensity\":\"medium\",\"enabled\":true},{\"type\":\"eyeshadow\",\"color\":\"taupe\",\"intensity\":\"light\",\"enabled\":true},{\"type\":\"eyeliner\",\"color\":\"brown\",\"intensity\":\"light\",\"enabled\":true},{\"type\":\"mascara\",\"color\":\"black\",\"intensity\":\"medium\",\"enabled\":true},{\"type\":\"highlighter\",\"color\":\"light\",\"intensity\":\"light\",\"enabled\":true},{\"type\":\"blush\",\"color\":\"peach\",\"intensity\":\"light\",\"enabled\":true}]"
+    },
+    
+  "Street Chic": {
+      "torso": "blazer",
+      "legs": "jeans",
+      "feet": "ankle boots",
+      "headgear": "fedora",
+      "neck": "scarf",
+      "background": "Street art alley",
+      "pose": "Looking back while walking",
+      "mood": "dynamic",
+      "time_of_day": "dusk",
+      "color_scheme": "muted",
+      "makeup_data": "[{\"type\":\"lipstick\",\"color\":\"nude\",\"intensity\":\"medium\",\"enabled\":true},{\"type\":\"eyeliner\",\"color\":\"black\",\"intensity\":\"medium\",\"enabled\":true},{\"type\":\"eyeshadow\",\"color\":\"smoky\",\"intensity\":\"medium\",\"enabled\":true},{\"type\":\"mascara\",\"color\":\"black\",\"intensity\":\"medium\",\"enabled\":true}]"
+    },
+    
+    "Red Carpet": {
+      "torso": "cocktail dress",
+      "legs": "sheer tights",
+      "feet": "metallic pumps",
+      "headgear": "fascinator",
+      "neck": "statement necklace",
+      "ear": "chandelier earrings",
+      "fingers": "statement ring",
+      "background": "Luxury hotel lobby",
+      "pose": "Over-the-shoulder look",
+      "mood": "dramatic",
+      "time_of_day": "night",
+      "color_scheme": "vibrant",
+      "makeup_data": "[{\"type\":\"lipstick\",\"color\":\"red\",\"intensity\":\"heavy\",\"enabled\":true},{\"type\":\"eyeshadow\",\"color\":\"smoky\",\"intensity\":\"medium\",\"enabled\":true},{\"type\":\"eyeliner\",\"color\":\"black\",\"intensity\":\"heavy\",\"enabled\":true},{\"type\":\"mascara\",\"color\":\"black\",\"intensity\":\"heavy\",\"enabled\":true},{\"type\":\"highlighter\",\"color\":\"light\",\"intensity\":\"medium\",\"enabled\":true}]"
+    }
+  }
+}

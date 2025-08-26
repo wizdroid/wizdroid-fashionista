@@ -7,6 +7,8 @@
     {"type": "corset", "material": "lace"},
     {"type": "cummerbund", "material": "various"},
     {"type": "obi", "country": "Japan", "material": "various"},
-    {"type": "money belt", "material": "leather"}
+    {"type": "money belt", "material": "leather"},
+    {"type": "chain belt", "material": "metal"},
+    {"type": "jeweled belt", "material": "crystal"}
   ]
 }

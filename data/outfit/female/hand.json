@@ -24,6 +24,10 @@
     {"type": "heated gloves"},
     {"type": "nail art"},
     {"type": "temporary tattoo"},
-    {"type": "bare hands"}
+    {"type": "bare hands"},
+    {"type": "satin evening gloves"},
+    {"type": "opera-length gloves"},
+    {"type": "red manicure"},
+    {"type": "french manicure"}
   ]
 }
