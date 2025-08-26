@@ -55,6 +55,14 @@ def create_outfit_node(gender: str):
                             "tooltip": "Choose a preset to auto-fill empty fields (none/random)",
                         },
                     ),
+                    "avoid_terms": (
+                        "STRING",
+                        {
+                            "default": "",
+                            "multiline": True,
+                            "placeholder": "Things to exclude (e.g., blurry, low-res, extra fingers)",
+                        },
+                    ),
                     "age_group": (age_groups_options, {"default": "random"}),
                     "character_name": ("STRING", {"default": "", "multiline": False}),
                     "body_type": (body_types_options, {"default": "random"}),
@@ -81,6 +89,7 @@ def create_outfit_node(gender: str):
                         ["fixed", "random", "increment", "decrement"],
                         {"default": "random"},
                     ),
+                    "export_preset": ("BOOLEAN", {"default": False}),
                 },
                 "hidden": {
                     "makeup_data": ("STRING", {"default": "", "multiline": False}),
@@ -148,6 +157,25 @@ def create_outfit_node(gender: str):
                     if unknown:
                         print(f"[Preset] '{selected_preset}' contains unknown keys: {unknown}")
                     kwargs = apply_preset(kwargs, preset_map)
+
+            # Optional export of current selection as a preset snippet
+            if kwargs.get("export_preset", False):
+                exclude_keys = {"seed", "seed_mode", "_last_seed", "preset", "character_name", "custom_attributes"}
+                export_map = {}
+                for k, v in kwargs.items():
+                    if k in exclude_keys:
+                        continue
+                    if k not in allowed_keys:
+                        continue
+                    if isinstance(v, str) and v.strip() in ("", "none", "random"):
+                        continue
+                    export_map[k] = v
+                try:
+                    import json
+                    snippet = json.dumps(export_map, ensure_ascii=False, indent=2)
+                    print(f"[Preset Export][{gender}] Copy this under your preset name in data/presets.json:\n{snippet}")
+                except Exception as e:
+                    print(f"[Preset Export] Failed to serialize preset: {e}")
 
             builder = PromptBuilder(seed=use_seed, data=kwargs, options=all_options)
             final_prompt = builder.build(body_parts=body_parts)

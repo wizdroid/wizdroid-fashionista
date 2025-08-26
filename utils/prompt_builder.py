@@ -96,4 +96,9 @@ class PromptBuilder:
         if custom_attributes:
             self.prompt_parts.append(f"Additional: {custom_attributes}")
 
+        # Negative/avoid terms
+        avoid_terms = self.data.get("avoid_terms", "").strip()
+        if avoid_terms:
+            self.prompt_parts.append(f"Avoid: {avoid_terms}")
+
         return ", ".join(self.prompt_parts)

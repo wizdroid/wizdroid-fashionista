@@ -28,6 +28,8 @@ A comprehensive outfit generation system for ComfyUI with AI-powered prompt enha
 - **Age & Demographics**: Comprehensive character customization
  - **Smart Presets**: Curated presets per gender that auto-fill only empty fields
  - **Makeup UI**: Animated, toggleable makeup editor with duplicate/clear controls
+ - **Avoid Terms**: Add negative keywords (e.g., blurry, low-res) to refine outputs
+ - **Preset Export**: Toggle to print a JSON snippet of your current choices to console
 
 ## 📦 Installation
 
@@ -71,6 +73,13 @@ Notes:
 - Presets are loaded from `data/presets.json` under keys by gender.
 
 ### Makeup Editor
+### Avoid Terms
+- Use the Avoid field to list items you don’t want (comma-separated or free text).
+- These are appended as “Avoid: ...” in the final prompt.
+
+### Export Preset
+- Toggle “export_preset” to print a preset JSON snippet to the console.
+- Paste under your gender in `data/presets.json` and give it a name.
 - Click the Makeup field to open the editor.
 - Add items like lipstick, eyeliner, blush, highlighter, etc.
 - Use the Enable/Duplicate/Clear All controls for quick edits.
