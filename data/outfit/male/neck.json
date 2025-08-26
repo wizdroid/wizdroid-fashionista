@@ -15,6 +15,7 @@
     {"type": "neckerchief", "material": "cotton"},
     {"type": "medal", "material": "metal"},
     {"type": "dogtag", "material": "metal"},
-    {"type": "cravat", "country": "France", "material": "silk"}
+    {"type": "cravat", "country": "France", "material": "silk"},
+    {"type": "mala", "country": "India", "material": "beads"}
   ]
 }

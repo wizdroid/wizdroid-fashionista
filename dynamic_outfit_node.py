@@ -48,7 +48,13 @@ def create_outfit_node(gender: str):
             """Define node inputs based on loaded data."""
             inputs = {
                 "required": {
-                    "preset": (preset_options, {"default": "none"}),
+                    "preset": (
+                        preset_options,
+                        {
+                            "default": "none",
+                            "tooltip": "Choose a preset to auto-fill empty fields (none/random)",
+                        },
+                    ),
                     "age_group": (age_groups_options, {"default": "random"}),
                     "character_name": ("STRING", {"default": "", "multiline": False}),
                     "body_type": (body_types_options, {"default": "random"}),
@@ -112,14 +118,7 @@ def create_outfit_node(gender: str):
             
             print(f"[{self.__class__.__name__}] Using seed: {use_seed} (mode: {seed_mode})")
 
-            # Apply preset if selected (fills only empty/none/random fields)
-            selected_preset = kwargs.get("preset", "none")
-            if selected_preset and selected_preset != "none":
-                preset_map = presets_all.get(gender, {}).get(selected_preset, {})
-                if isinstance(preset_map, dict):
-                    kwargs = apply_preset(kwargs, preset_map)
-
-            # Consolidate all options for the prompt builder
+            # Consolidate all options for the prompt builder (also used for preset validation)
             all_options = {
                 "age_group": age_groups_options,
                 "race": races_options,
@@ -135,6 +134,20 @@ def create_outfit_node(gender: str):
                 "creative_scale": scale_options,
                 **attire_options,
             }
+
+            allowed_non_attire = {"makeup_data", "pose", "background", "age_group", "race", "body_type", "mood", "time_of_day", "weather", "color_scheme", "description_style", "creative_scale", "character_name", "custom_attributes", "seed", "seed_mode"}
+            allowed_keys = set(all_options.keys()) | set(body_parts) | allowed_non_attire
+
+            # Apply preset if selected (fills only empty/none/random fields)
+            selected_preset = kwargs.get("preset", "none")
+            if selected_preset and selected_preset != "none":
+                preset_map = presets_all.get(gender, {}).get(selected_preset, {})
+                if isinstance(preset_map, dict):
+                    # Warn if preset has keys that don't match inputs (for curation)
+                    unknown = [k for k in preset_map.keys() if k not in allowed_keys]
+                    if unknown:
+                        print(f"[Preset] '{selected_preset}' contains unknown keys: {unknown}")
+                    kwargs = apply_preset(kwargs, preset_map)
 
             builder = PromptBuilder(seed=use_seed, data=kwargs, options=all_options)
             final_prompt = builder.build(body_parts=body_parts)

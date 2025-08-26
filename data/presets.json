@@ -108,5 +108,80 @@
       "color_scheme": "vibrant",
       "makeup_data": "[{\"type\":\"lipstick\",\"color\":\"red\",\"intensity\":\"heavy\",\"enabled\":true},{\"type\":\"eyeshadow\",\"color\":\"smoky\",\"intensity\":\"medium\",\"enabled\":true},{\"type\":\"eyeliner\",\"color\":\"black\",\"intensity\":\"heavy\",\"enabled\":true},{\"type\":\"mascara\",\"color\":\"black\",\"intensity\":\"heavy\",\"enabled\":true},{\"type\":\"highlighter\",\"color\":\"light\",\"intensity\":\"medium\",\"enabled\":true}]"
     }
+  },
+  "male": {
+    "Beach Day": {
+      "torso": "t-shirt",
+      "legs": "board shorts",
+      "feet": "flip-flops",
+      "headgear": "sun hat",
+      "eyewear": "sunglasses",
+      "background": "Beach boardwalk",
+      "pose": "Hands in pockets, relaxed stance",
+      "mood": "bright",
+      "time_of_day": "afternoon",
+      "color_scheme": "warm tones"
+    },
+    "Fitness Studio": {
+      "torso": "tank top",
+      "legs": "athletic shorts",
+      "feet": "running shoes",
+      "headgear": "headband",
+      "hand": "bare hands",
+      "background": "Industrial warehouse",
+      "pose": "Standing tall, chest out",
+      "mood": "dynamic",
+      "time_of_day": "morning",
+      "color_scheme": "cool tones"
+    },
+    "Indian Wedding": {
+      "torso": "kurta",
+      "legs": "dhoti",
+      "feet": "sandals",
+      "neck": "mala",
+      "headgear": "turban",
+      "fingers": "wedding ring",
+      "background": "Ancient temple courtyard",
+      "pose": "Standing with arms crossed",
+      "mood": "euphoric",
+      "time_of_day": "sunset",
+      "color_scheme": "vibrant"
+    },
+    "Western Wedding": {
+      "torso": "tuxedo jacket",
+      "legs": "tuxedo pants",
+      "feet": "oxfords",
+      "neck": "bow tie",
+      "fingers": "wedding ring",
+      "background": "Classic ballroom",
+      "pose": "Adjusting a tie in the mirror, with a smug 'I know I look good' smile.",
+      "mood": "serene",
+      "time_of_day": "afternoon",
+      "color_scheme": "monochromatic"
+    },
+    "Street Chic": {
+      "torso": "blazer",
+      "legs": "jeans",
+      "feet": "chelsea boots",
+      "headgear": "fedora",
+      "neck": "scarf",
+      "background": "Street art alley",
+      "pose": "Leaning against wall, serious look",
+      "mood": "dynamic",
+      "time_of_day": "dusk",
+      "color_scheme": "muted"
+    },
+    "Red Carpet": {
+      "torso": "tuxedo jacket",
+      "legs": "tuxedo pants",
+      "feet": "dress shoes",
+      "neck": "bow tie",
+      "ear": "diamond stud",
+      "background": "Luxury hotel lobby",
+      "pose": "Standing with jacket over shoulder",
+      "mood": "dramatic",
+      "time_of_day": "night",
+      "color_scheme": "vibrant"
+    }
   }
 }

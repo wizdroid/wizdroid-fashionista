@@ -26,6 +26,8 @@ A comprehensive outfit generation system for ComfyUI with AI-powered prompt enha
 - **Style Controls**: Art styles, lighting, cameras, and more
 - **Background Options**: Diverse scene and environment settings
 - **Age & Demographics**: Comprehensive character customization
+ - **Smart Presets**: Curated presets per gender that auto-fill only empty fields
+ - **Makeup UI**: Animated, toggleable makeup editor with duplicate/clear controls
 
 ## 📦 Installation
 
@@ -59,6 +61,20 @@ git clone https://github.com/manifestations/comfyui-outfit.git
 [Female Outfit Node] → [Text Output] → [Your Image Generation Model]
 ```
 
+### Using Presets
+- Choose a Preset from the dropdown. It fills only fields that are empty/none/random.
+- You can still override any field afterwards.
+- Presets include pose, background, and scene highlights (mood, time, color scheme), plus optional makeup.
+
+Notes:
+- If a preset references an unknown key, the node logs a warning to help curate data.
+- Presets are loaded from `data/presets.json` under keys by gender.
+
+### Makeup Editor
+- Click the Makeup field to open the editor.
+- Add items like lipstick, eyeliner, blush, highlighter, etc.
+- Use the Enable/Duplicate/Clear All controls for quick edits.
+
 ## 📋 Requirements
 
 ### Core Requirements
@@ -80,3 +96,20 @@ For vision node support:
 ## License
 
 MIT License. See [LICENSE](LICENSE).
+
+## 🧩 Data & Extensibility
+
+### Add or Edit Outfit Options
+- Edit JSON files in `data/outfit/<gender>/*.json`. Each file contains an `attire` array of objects with a `type` string.
+- The node automatically discovers parts and prepends control values: `none`, `random`.
+
+### Add Presets
+- Edit `data/presets.json`:
+   - Top-level keys: `female`, `male`.
+   - Under each, add presets by name mapping to `{ part_or_option_key: value }`.
+   - Only keys present as inputs will be applied; others are ignored with a warning.
+- Keep values aligned with available options in the corresponding JSONs (poses/backgrounds included).
+
+### Scene/Style Controls
+- Tunables include: `mood`, `time_of_day`, `weather`, `color_scheme`, `description_style`, and `creative_scale`.
+- Styles are defined under `data/styles/` and are easy to extend.
