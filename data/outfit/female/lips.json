@@ -1,20 +1,20 @@
 {
   "body_part": "lips",
   "attire": [
-    {"type": "natural lips", "country": "neutral", "description": "natural lip color"},
-    {"type": "full lips", "country": "neutral", "description": "naturally full lips"},
-    {"type": "thin lips", "country": "neutral", "description": "naturally thin lips"},
-    {"type": "lip piercing", "country": "neutral"},
-    {"type": "lip ring", "country": "neutral"},
-    {"type": "labret piercing", "country": "neutral"},
-    {"type": "lip stud", "country": "neutral"},
-    {"type": "lip tattoo", "country": "neutral"},
-    {"type": "lip scar", "country": "neutral", "description": "natural or decorative scar"},
-    {"type": "cupid's bow", "country": "neutral", "description": "pronounced cupid's bow"},
-    {"type": "heart-shaped lips", "country": "neutral", "description": "natural heart shape"},
-    {"type": "bow lips", "country": "neutral", "description": "classic bow shape"},
-    {"type": "wide lips", "country": "neutral", "description": "naturally wide lips"},
-    {"type": "pursed lips", "country": "neutral", "description": "naturally pursed"},
-    {"type": "smiling lips", "country": "neutral", "description": "naturally upturned"}
+    {"type": "natural lips", "description": "natural lip color"},
+    {"type": "full lips", "description": "naturally full lips"},
+    {"type": "thin lips", "description": "naturally thin lips"},
+    {"type": "lip piercing"},
+    {"type": "lip ring"},
+    {"type": "labret piercing"},
+    {"type": "lip stud"},
+    {"type": "lip tattoo"},
+    {"type": "lip scar", "description": "natural or decorative scar"},
+    {"type": "cupid's bow", "description": "pronounced cupid's bow"},
+    {"type": "heart-shaped lips", "description": "natural heart shape"},
+    {"type": "bow lips", "description": "classic bow shape"},
+    {"type": "wide lips", "description": "naturally wide lips"},
+    {"type": "pursed lips", "description": "naturally pursed"},
+    {"type": "smiling lips", "description": "naturally upturned"}
   ]
 }

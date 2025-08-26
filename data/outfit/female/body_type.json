@@ -1,20 +1,20 @@
 {
   "body_part": "body_type",
   "attire": [
-    {"type": "slim", "country": "neutral", "description": "lean, slender build"},
-    {"type": "athletic", "country": "neutral", "description": "toned, muscular physique"},
-    {"type": "curvy", "country": "neutral", "description": "well-defined waist and hips"},
-    {"type": "petite", "country": "neutral", "description": "small, delicate frame"},
-    {"type": "plus size", "country": "neutral", "description": "fuller, rounder figure"},
-    {"type": "tall", "country": "neutral", "description": "above-average height"},
-    {"type": "pear", "country": "neutral", "description": "narrow shoulders, wider hips"},
-    {"type": "apple", "country": "neutral", "description": "broader shoulders, narrower hips"},
-    {"type": "hourglass", "country": "neutral", "description": "balanced bust and hips, defined waist"},
-    {"type": "rectangle", "country": "neutral", "description": "straight, balanced proportions"},
-    {"type": "inverted triangle", "country": "neutral", "description": "broad shoulders, narrow hips"},
-    {"type": "diamond", "country": "neutral", "description": "narrow shoulders and hips, wider middle"},
-    {"type": "average", "country": "neutral", "description": "medium, proportionate build"},
-    {"type": "statuesque", "country": "neutral", "description": "tall and elegant"},
-    {"type": "willowy", "country": "neutral", "description": "tall and slender"}
+    {"type": "slim", "description": "lean, slender build"},
+    {"type": "athletic", "description": "toned, muscular physique"},
+    {"type": "curvy", "description": "well-defined waist and hips"},
+    {"type": "petite", "description": "small, delicate frame"},
+    {"type": "plus size", "description": "fuller, rounder figure"},
+    {"type": "tall", "description": "above-average height"},
+    {"type": "pear", "description": "narrow shoulders, wider hips"},
+    {"type": "apple", "description": "broader shoulders, narrower hips"},
+    {"type": "hourglass", "description": "balanced bust and hips, defined waist"},
+    {"type": "rectangle", "description": "straight, balanced proportions"},
+    {"type": "inverted triangle", "description": "broad shoulders, narrow hips"},
+    {"type": "diamond", "description": "narrow shoulders and hips, wider middle"},
+    {"type": "average", "description": "medium, proportionate build"},
+    {"type": "statuesque", "description": "tall and elegant"},
+    {"type": "willowy", "description": "tall and slender"}
   ]
 }

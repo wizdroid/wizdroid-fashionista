@@ -27,10 +27,13 @@ def setup_project():
     required_files = [
         "dynamic_outfit_node.py",
         "__init__.py",
-        "data/poses.json",
+        # global data
         "data/backgrounds.json",
         "data/race.json",
+        "data/age_groups.json",
+        # outfit data dirs
         "data/outfit/female",
+        "data/outfit/male",
     ]
 
     missing_files: list[str] = []
@@ -45,12 +48,14 @@ def setup_project():
         return False
 
     # Verify JSON files are valid
-    json_files = ["data/poses.json", "data/backgrounds.json", "data/race.json"]
+    json_files = ["data/backgrounds.json", "data/race.json", "data/age_groups.json"]
 
     # Add female outfit JSON files
-    female_dir = current_dir / "data" / "outfit" / "female"
-    if female_dir.exists():
-        json_files.extend([str(f) for f in female_dir.glob("*.json")])
+    # Add outfit JSON files for both genders
+    for gender in ("female", "male"):
+        gender_dir = current_dir / "data" / "outfit" / gender
+        if gender_dir.exists():
+            json_files.extend([str(f.relative_to(current_dir)) for f in gender_dir.glob("*.json")])
 
     for json_file in json_files:
         try:
@@ -70,7 +75,7 @@ def setup_project():
         import subprocess
 
         result = subprocess.run(
-            ["python", "-m", "unittest", "test_dynamic_outfit_updated.py", "-v"],
+            ["python", "-m", "pytest", "-q"],
             cwd=current_dir,
             capture_output=True,
             text=True,
@@ -89,7 +94,7 @@ def setup_project():
     print("\nTo use this node:")
     print("1. Make sure this directory is in your ComfyUI/custom_nodes/ folder")
     print("2. Restart ComfyUI")
-    print("3. Look for 'Outfit/Female' category in the node browser")
+    print("3. Look for 'Outfit/Female' and 'Outfit/Male' categories in the node browser")
 
     return True
 

@@ -1,20 +1,20 @@
 {
   "body_part": "forearm",
   "attire": [
-    {"type": "tattoo", "country": "neutral", "material": "ink"},
-    {"type": "sleeve tattoo", "country": "neutral", "material": "ink"},
-    {"type": "forearm guard", "country": "neutral", "material": "leather"},
-    {"type": "wristband", "country": "neutral", "material": "fabric"},
-    {"type": "sweatband", "country": "neutral", "material": "fabric"},
-    {"type": "compression sleeve", "country": "neutral", "material": "spandex"},
-    {"type": "arm warmer", "country": "neutral", "material": "knit"},
-    {"type": "elbow support", "country": "neutral", "material": "neoprene"},
+    {"type": "tattoo", "material": "ink"},
+    {"type": "sleeve tattoo", "material": "ink"},
+    {"type": "forearm guard", "material": "leather"},
+    {"type": "wristband", "material": "fabric"},
+    {"type": "sweatband", "material": "fabric"},
+    {"type": "compression sleeve", "material": "spandex"},
+    {"type": "arm warmer", "material": "knit"},
+    {"type": "elbow support", "material": "neoprene"},
     {"type": "tribal tattoo", "country": "various", "material": "ink"},
-    {"type": "script tattoo", "country": "neutral", "material": "ink"},
-    {"type": "geometric tattoo", "country": "neutral", "material": "ink"},
+    {"type": "script tattoo", "material": "ink"},
+    {"type": "geometric tattoo", "material": "ink"},
     {"type": "religious tattoo", "country": "various", "material": "ink"},
-    {"type": "memorial tattoo", "country": "neutral", "material": "ink"},
-    {"type": "sports tattoo", "country": "neutral", "material": "ink"},
-    {"type": "bare forearm", "country": "neutral", "material": "none"}
+    {"type": "memorial tattoo", "material": "ink"},
+    {"type": "sports tattoo", "material": "ink"},
+    {"type": "bare forearm", "material": "none"}
   ]
 }

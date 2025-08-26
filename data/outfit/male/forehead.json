@@ -1,20 +1,20 @@
 {
   "body_part": "forehead",
   "attire": [
-    {"type": "forehead tattoo", "country": "neutral", "material": "ink"},
+    {"type": "forehead tattoo", "material": "ink"},
     {"type": "bindi", "country": "India", "material": "fabric"},
     {"type": "tilaka", "country": "India", "material": "paste"},
-    {"type": "headband", "country": "neutral", "material": "fabric"},
-    {"type": "sweatband", "country": "neutral", "material": "fabric"},
-    {"type": "bandage", "country": "neutral", "material": "fabric"},
-    {"type": "face paint", "country": "neutral", "material": "paint"},
+    {"type": "headband", "material": "fabric"},
+    {"type": "sweatband", "material": "fabric"},
+    {"type": "bandage", "material": "fabric"},
+    {"type": "face paint", "material": "paint"},
     {"type": "war paint", "country": "various", "material": "paint"},
     {"type": "tribal markings", "country": "various", "material": "paint"},
-    {"type": "scar", "country": "neutral", "material": "skin"},
-    {"type": "birthmark", "country": "neutral", "material": "skin"},
-    {"type": "freckles", "country": "neutral", "material": "skin"},
-    {"type": "wrinkles", "country": "neutral", "material": "skin"},
-    {"type": "smooth forehead", "country": "neutral", "material": "skin"},
-    {"type": "bare forehead", "country": "neutral", "material": "none"}
+    {"type": "scar", "material": "skin"},
+    {"type": "birthmark", "material": "skin"},
+    {"type": "freckles", "material": "skin"},
+    {"type": "wrinkles", "material": "skin"},
+    {"type": "smooth forehead", "material": "skin"},
+    {"type": "bare forehead", "material": "none"}
   ]
 }

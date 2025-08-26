@@ -1,20 +1,20 @@
 {
   "body_part": "neck",
   "attire": [
-    {"type": "tie", "country": "neutral", "material": "silk"},
-    {"type": "bow tie", "country": "neutral", "material": "silk"},
+    {"type": "tie", "material": "silk"},
+    {"type": "bow tie", "material": "silk"},
     {"type": "ascot", "country": "UK", "material": "silk"},
-    {"type": "scarf", "country": "neutral", "material": "wool"},
-    {"type": "necklace", "country": "neutral", "material": "gold"},
-    {"type": "chain", "country": "neutral", "material": "gold"},
-    {"type": "pendant", "country": "neutral", "material": "various"},
-    {"type": "choker", "country": "neutral", "material": "leather"},
-    {"type": "collar", "country": "neutral", "material": "fabric"},
-    {"type": "turtleneck", "country": "neutral", "material": "knit"},
-    {"type": "bandana", "country": "neutral", "material": "cotton"},
-    {"type": "neckerchief", "country": "neutral", "material": "cotton"},
-    {"type": "medal", "country": "neutral", "material": "metal"},
-    {"type": "dogtag", "country": "neutral", "material": "metal"},
+    {"type": "scarf", "material": "wool"},
+    {"type": "necklace", "material": "gold"},
+    {"type": "chain", "material": "gold"},
+    {"type": "pendant", "material": "various"},
+    {"type": "choker", "material": "leather"},
+    {"type": "collar", "material": "fabric"},
+    {"type": "turtleneck", "material": "knit"},
+    {"type": "bandana", "material": "cotton"},
+    {"type": "neckerchief", "material": "cotton"},
+    {"type": "medal", "material": "metal"},
+    {"type": "dogtag", "material": "metal"},
     {"type": "cravat", "country": "France", "material": "silk"}
   ]
 }

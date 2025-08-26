@@ -1,12 +1,12 @@
 {
   "body_part": "waist",
   "attire": [
-    {"type": "belt", "country": "neutral", "material": "leather"},
+    {"type": "belt", "material": "leather"},
     {"type": "sash", "country": "Japan", "material": "silk"},
     {"type": "waist chain", "country": "India", "material": "gold"},
-    {"type": "corset", "country": "neutral", "material": "lace"},
-    {"type": "cummerbund", "country": "neutral", "material": "various"},
+    {"type": "corset", "material": "lace"},
+    {"type": "cummerbund", "material": "various"},
     {"type": "obi", "country": "Japan", "material": "various"},
-    {"type": "money belt", "country": "neutral", "material": "leather"}
+    {"type": "money belt", "material": "leather"}
   ]
 }

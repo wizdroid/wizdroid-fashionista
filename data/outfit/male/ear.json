@@ -1,20 +1,20 @@
 {
   "body_part": "ear",
   "attire": [
-    {"type": "stud earring", "country": "neutral", "material": "gold"},
-    {"type": "hoop earring", "country": "neutral", "material": "gold"},
-    {"type": "diamond stud", "country": "neutral", "material": "diamond"},
-    {"type": "ear cuff", "country": "neutral", "material": "metal"},
-    {"type": "ear plug", "country": "neutral", "material": "metal"},
-    {"type": "ear tunnel", "country": "neutral", "material": "metal"},
-    {"type": "ear weight", "country": "neutral", "material": "metal"},
-    {"type": "industrial piercing", "country": "neutral", "material": "metal"},
-    {"type": "tragus piercing", "country": "neutral", "material": "metal"},
-    {"type": "helix piercing", "country": "neutral", "material": "metal"},
-    {"type": "conch piercing", "country": "neutral", "material": "metal"},
-    {"type": "daith piercing", "country": "neutral", "material": "metal"},
-    {"type": "rook piercing", "country": "neutral", "material": "metal"},
-    {"type": "hearing aid", "country": "neutral", "material": "plastic"},
-    {"type": "bare ears", "country": "neutral", "material": "none"}
+    {"type": "stud earring", "material": "gold"},
+    {"type": "hoop earring", "material": "gold"},
+    {"type": "diamond stud", "material": "diamond"},
+    {"type": "ear cuff", "material": "metal"},
+    {"type": "ear plug", "material": "metal"},
+    {"type": "ear tunnel", "material": "metal"},
+    {"type": "ear weight", "material": "metal"},
+    {"type": "industrial piercing", "material": "metal"},
+    {"type": "tragus piercing", "material": "metal"},
+    {"type": "helix piercing", "material": "metal"},
+    {"type": "conch piercing", "material": "metal"},
+    {"type": "daith piercing", "material": "metal"},
+    {"type": "rook piercing", "material": "metal"},
+    {"type": "hearing aid", "material": "plastic"},
+    {"type": "bare ears", "material": "none"}
   ]
 }

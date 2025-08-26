@@ -1,16 +1,22 @@
 {
   "body_part": "makeup",
   "attire": [
-    {"type": "foundation", "country": "neutral"},
-    {"type": "concealer", "country": "neutral"},
-    {"type": "bronzer", "country": "neutral"},
-    {"type": "contour", "country": "neutral"},
-    {"type": "beard filler", "country": "neutral"},
-    {"type": "eyebrow pencil", "country": "neutral"},
-    {"type": "eyebrow gel", "country": "neutral"},
-    {"type": "highlighter", "country": "neutral"},
-    {"type": "setting powder", "country": "neutral"},
-    {"type": "setting spray", "country": "neutral"},
-    {"type": "no makeup", "country": "neutral"}
+    {"type": "foundation"},
+    {"type": "concealer"},
+    {"type": "bronzer"},
+    {"type": "contour"},
+    {"type": "beard filler"},
+    {"type": "eyebrow pencil"},
+    {"type": "eyebrow gel"},
+    {"type": "highlighter"},
+    {"type": "setting powder"},
+    {"type": "setting spray"},
+    {"type": "no makeup"}
+  ],
+  "colors": [
+    "black", "brown", "clear", "light", "medium", "dark", "deep", "natural", "neutral"
+  ],
+  "intensities": [
+    "light", "medium", "heavy"
   ]
 }

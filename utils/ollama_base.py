@@ -6,7 +6,10 @@ Provides common functionality for LLM and Vision nodes.
 import json
 from typing import Any, Dict, List, Optional
 
-import requests
+try:
+    import requests  # type: ignore
+except Exception:  # pragma: no cover
+    requests = None  # type: ignore
 
 
 class BaseOllamaNode:
@@ -27,6 +30,8 @@ class BaseOllamaNode:
             List of available model names
         """
         try:
+            if requests is None:
+                raise RuntimeError("'requests' not installed; install optional deps to enable Ollama features")
             tags_url = ollama_url.replace("/api/generate", "/api/tags")
             response = requests.get(tags_url, timeout=timeout)
             response.raise_for_status()
@@ -73,14 +78,13 @@ class BaseOllamaNode:
             Response JSON or None if failed
         """
         try:
+            if requests is None:
+                raise RuntimeError("'requests' not installed; install optional deps to enable Ollama features")
             response = requests.post(url, json=payload, timeout=timeout)
             response.raise_for_status()
             return response.json()
-        except requests.exceptions.RequestException as e:
-            print(f"[BaseOllamaNode] HTTP error during request: {e}")
-            return None
         except Exception as e:
-            print(f"[BaseOllamaNode] Unexpected error during request: {e}")
+            print(f"[BaseOllamaNode] Error during request: {e}")
             return None
     
     @staticmethod

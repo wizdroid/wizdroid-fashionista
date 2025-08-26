@@ -1,20 +1,20 @@
 {
   "body_part": "nose",
   "attire": [
-    {"type": "nose stud", "country": "neutral", "material": "gold"},
-    {"type": "nose ring", "country": "neutral", "material": "gold"},
-    {"type": "septum piercing", "country": "neutral", "material": "metal"},
-    {"type": "nostril piercing", "country": "neutral", "material": "metal"},
-    {"type": "bridge piercing", "country": "neutral", "material": "metal"},
-    {"type": "high nostril piercing", "country": "neutral", "material": "metal"},
-    {"type": "nasallang piercing", "country": "neutral", "material": "metal"},
+    {"type": "nose stud", "material": "gold"},
+    {"type": "nose ring", "material": "gold"},
+    {"type": "septum piercing", "material": "metal"},
+    {"type": "nostril piercing", "material": "metal"},
+    {"type": "bridge piercing", "material": "metal"},
+    {"type": "high nostril piercing", "material": "metal"},
+    {"type": "nasallang piercing", "material": "metal"},
     {"type": "nose chain", "country": "India", "material": "gold"},
-    {"type": "nose bone", "country": "neutral", "material": "bone"},
-    {"type": "nose screw", "country": "neutral", "material": "metal"},
-    {"type": "nose clip", "country": "neutral", "material": "metal"},
-    {"type": "nose guard", "country": "neutral", "material": "plastic"},
-    {"type": "glasses", "country": "neutral", "material": "plastic"},
-    {"type": "sunglasses", "country": "neutral", "material": "plastic"},
-    {"type": "bare nose", "country": "neutral", "material": "none"}
+    {"type": "nose bone", "material": "bone"},
+    {"type": "nose screw", "material": "metal"},
+    {"type": "nose clip", "material": "metal"},
+    {"type": "nose guard", "material": "plastic"},
+    {"type": "glasses", "material": "plastic"},
+    {"type": "sunglasses", "material": "plastic"},
+    {"type": "bare nose", "material": "none"}
   ]
 }
