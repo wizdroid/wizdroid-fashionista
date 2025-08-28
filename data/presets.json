@@ -108,6 +108,89 @@
       "color_scheme": "vibrant",
       "makeup_data": "[{\"type\":\"lipstick\",\"color\":\"red\",\"intensity\":\"heavy\",\"enabled\":true},{\"type\":\"eyeshadow\",\"color\":\"smoky\",\"intensity\":\"medium\",\"enabled\":true},{\"type\":\"eyeliner\",\"color\":\"black\",\"intensity\":\"heavy\",\"enabled\":true},{\"type\":\"mascara\",\"color\":\"black\",\"intensity\":\"heavy\",\"enabled\":true},{\"type\":\"highlighter\",\"color\":\"light\",\"intensity\":\"medium\",\"enabled\":true}]"
     }
+    ,
+    "Couture Editorial": {
+      "torso": "one-shoulder dress",
+      "legs": "sheer tights",
+      "feet": "platform heels",
+      "headgear": "fascinator",
+      "neck": "crystal collar",
+      "ear": "chandelier earrings",
+      "fingers": "statement ring",
+      "hand": "red manicure",
+      "waist": "corset",
+      "background": "Fashion runway",
+      "pose": "Over-the-shoulder look",
+      "mood": "dramatic",
+      "time_of_day": "night",
+      "color_scheme": "monochromatic",
+      "makeup_data": "[{\"type\":\"lipstick\",\"color\":\"red\",\"intensity\":\"heavy\",\"enabled\":true},{\"type\":\"eyeshadow\",\"color\":\"taupe\",\"intensity\":\"medium\",\"enabled\":true},{\"type\":\"eyeliner\",\"color\":\"black\",\"intensity\":\"heavy\",\"enabled\":true},{\"type\":\"mascara\",\"color\":\"black\",\"intensity\":\"heavy\",\"enabled\":true}]"
+    },
+    "Monochrome Editorial": {
+      "torso": "blazer",
+      "legs": "mini skirt",
+      "feet": "ankle boots",
+      "headgear": "beret",
+      "neck": "scarf",
+      "ear": "diamond studs",
+      "fingers": "stacked rings",
+      "hand": "french manicure",
+      "waist": "belt",
+      "background": "Art gallery",
+      "pose": "Looking back while walking",
+      "mood": "moody",
+      "time_of_day": "dusk",
+      "color_scheme": "monochromatic",
+      "makeup_data": "[{\"type\":\"lipstick\",\"color\":\"nude\",\"intensity\":\"medium\",\"enabled\":true},{\"type\":\"eyeliner\",\"color\":\"black\",\"intensity\":\"medium\",\"enabled\":true},{\"type\":\"mascara\",\"color\":\"black\",\"intensity\":\"medium\",\"enabled\":true}]"
+    },
+    "Resort Glam": {
+      "torso": "slip dress",
+      "legs": "sheer tights",
+      "feet": "metallic pumps",
+      "headgear": "sun hat",
+      "neck": "pearl necklace",
+      "ear": "pearl drop earrings",
+      "fingers": "diamond cocktail ring",
+      "hand": "red manicure",
+      "waist": "jeweled belt",
+      "background": "Tropical resort poolside",
+      "pose": "Standing with arms raised gracefully",
+      "mood": "serene",
+      "time_of_day": "golden hour",
+      "color_scheme": "warm tones"
+    },
+    "Vintage Hollywood": {
+      "torso": "cocktail dress",
+      "legs": "sheer tights",
+      "feet": "pumps",
+      "headgear": "pillbox hat",
+      "neck": "pearl necklace",
+      "ear": "pearl drop earrings",
+      "fingers": "statement ring",
+      "hand": "satin evening gloves",
+      "waist": "corset",
+      "background": "Classic ballroom",
+      "pose": "Over-the-shoulder look",
+      "mood": "nostalgic",
+      "time_of_day": "dusk",
+      "color_scheme": "warm tones"
+    },
+    "Runway Power Suit": {
+      "torso": "blazer",
+      "legs": "pencil skirt",
+      "feet": "ankle boots",
+      "headgear": "beret",
+      "neck": "layered gold chains",
+      "ear": "geometric earrings",
+      "fingers": "stacked rings",
+      "hand": "red manicure",
+      "waist": "belt",
+      "background": "Fashion runway",
+      "pose": "Standing with one hand on hip",
+      "mood": "dynamic",
+      "time_of_day": "afternoon",
+      "color_scheme": "monochromatic"
+    }
   },
   "male": {
     "Beach Day": {
@@ -182,6 +265,69 @@
       "mood": "dramatic",
       "time_of_day": "night",
       "color_scheme": "vibrant"
+    }
+    ,
+    "Runway Tux": {
+      "torso": "tuxedo jacket",
+      "legs": "tuxedo pants",
+      "feet": "dress shoes",
+      "neck": "bow tie",
+      "eyewear": "no eyewear",
+      "background": "Fashion runway",
+      "pose": "Standing with jacket over shoulder",
+      "mood": "dramatic",
+      "time_of_day": "night",
+      "color_scheme": "monochromatic"
+    },
+    "Urban Editorial": {
+      "torso": "blazer",
+      "legs": "jeans",
+      "feet": "chelsea boots",
+      "headgear": "fedora",
+      "neck": "scarf",
+      "eyewear": "wayfarer sunglasses",
+      "background": "Street art alley",
+      "pose": "Leaning against wall, serious look",
+      "mood": "moody",
+      "time_of_day": "dusk",
+      "color_scheme": "muted"
+    },
+    "Resort Editorial": {
+      "torso": "button-up shirt",
+      "legs": "linen pants",
+      "feet": "loafers",
+      "headgear": "sun hat",
+      "eyewear": "aviator sunglasses",
+      "background": "Tropical resort poolside",
+      "pose": "Hands in pockets, relaxed stance",
+      "mood": "serene",
+      "time_of_day": "golden hour",
+      "color_scheme": "warm tones"
+    },
+    "Art Gallery Chic": {
+      "torso": "dress shirt",
+      "legs": "dress pants",
+      "feet": "oxfords",
+      "headgear": "beret",
+      "neck": "tie",
+      "eyewear": "round glasses",
+      "background": "Art gallery",
+      "pose": "Standing with one hand in pocket",
+      "mood": "vintage",
+      "time_of_day": "afternoon",
+      "color_scheme": "earth tones"
+    },
+    "Runway Sport Luxe": {
+      "torso": "suit jacket",
+      "legs": "dress pants",
+      "feet": "sneakers",
+      "neck": "chain",
+      "eyewear": "sunglasses",
+      "background": "Fashion runway",
+      "pose": "Walking confidently",
+      "mood": "dynamic",
+      "time_of_day": "afternoon",
+      "color_scheme": "monochromatic"
     }
   }
 }
