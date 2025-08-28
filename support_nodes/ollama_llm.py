@@ -8,7 +8,7 @@ import os
 import random
 import requests
 from pathlib import Path
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List, Tuple, Optional
 
 
 def load_json_file(file_path: str, default: Any = None) -> Any:
@@ -21,7 +21,18 @@ def load_json_file(file_path: str, default: Any = None) -> Any:
         return default if default is not None else {}
 
 
-def safe_random_choice(options: List[str], exclude: List[str] = None) -> str:
+def load_json_if_exists(file_path: str, default: Any = None) -> Any:
+    """Load JSON only if the file exists to avoid noisy error logs for optional files."""
+    try:
+        if os.path.isfile(file_path):
+            return load_json_file(file_path, default)
+        return default if default is not None else {}
+    except Exception:
+        # Silently fall back for optional data
+        return default if default is not None else {}
+
+
+def safe_random_choice(options: List[str], exclude: Optional[List[str]] = None) -> str:
     """Safely select a random choice from options, excluding specified values."""
     if not options:
         return "none"
@@ -77,25 +88,34 @@ class OptimizedOllamaLLMNode:
 
     @classmethod
     def _load_styles_data(cls) -> Dict[str, Any]:
-        """Load all styles data for the node."""
+        """Load styles data for the node while gracefully handling optional files."""
         styles_dir = os.path.join(cls._get_data_directory(), "styles")
-        
+
+        # Always present (repo includes these)
+        scene_highlights = load_json_if_exists(
+            os.path.join(styles_dir, "scene_highlights.json"), {}
+        )
+        scale_instructions: Dict[str, str] = load_json_if_exists(
+            os.path.join(styles_dir, "scale_instructions.json"), {}
+        )
+
+        # Derive available detail scales from scale_instructions keys
+        detail_scales: List[str] = list(scale_instructions.keys()) if isinstance(scale_instructions, dict) else []
+        if not detail_scales:
+            detail_scales = ["none"]
+
+        # Optional creative mode instructions; only load if file exists to avoid error spam
+        creative_mode_instructions: Dict[str, str] = load_json_if_exists(
+            os.path.join(styles_dir, "creative_mode_instructions.json"), {}
+        )
+        creative_modes: List[str] = list(creative_mode_instructions.keys()) if isinstance(creative_mode_instructions, dict) and creative_mode_instructions else ["standard"]
+
         return {
-            "scene_highlights": load_json_file(
-                os.path.join(styles_dir, "scene_highlights.json"), {}
-            ),
-            "detail_scales": load_json_file(
-                os.path.join(styles_dir, "detail_scales.json"), ["none"]
-            ),
-            "creative_modes": load_json_file(
-                os.path.join(styles_dir, "creative_modes.json"), ["standard"]
-            ),
-            "scale_instructions": load_json_file(
-                os.path.join(styles_dir, "scale_instructions.json"), {}
-            ),
-            "creative_mode_instructions": load_json_file(
-                os.path.join(styles_dir, "creative_mode_instructions.json"), {}
-            ),
+            "scene_highlights": scene_highlights,
+            "detail_scales": detail_scales,
+            "creative_modes": creative_modes,
+            "scale_instructions": scale_instructions,
+            "creative_mode_instructions": creative_mode_instructions,
         }
 
     @classmethod

@@ -7,8 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
-- Initial release of ComfyUI Outfit Selection
+
+## [2.0.1] - 2025-08-28
+
+### Fixed
+- Remove noisy "No such file or directory" logs in OptimizedOllamaLLMNode for optional style files. Detail scale options are derived from `data/styles/scale_instructions.json`, and creative mode instructions are only loaded if present.
+
+### Changed
+- Treat `detail_scales.json`, `creative_modes.json`, and `creative_mode_instructions.json` as optional with sensible defaults.
 
 ## [2.0.0] - 2025-01-12
 
