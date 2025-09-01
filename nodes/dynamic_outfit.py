@@ -13,7 +13,7 @@ from ..utils.data_loader import (
     load_presets,
 )
 from ..utils.prompt_builder import PromptBuilder
-from ..utils.common import apply_preset
+from ..utils.common import apply_preset, extract_outfit_template, apply_outfit_template
 
 # Constants
 OUTFIT_CATEGORY = "👗 Outfit"
@@ -38,7 +38,7 @@ def create_outfit_node(gender: str):
     scale_options = load_scale_options(styles_dir)
     presets_all = load_presets(data_dir)
     gender_presets = sorted(list(presets_all.get(gender, {}).keys())) if isinstance(presets_all, dict) else []
-    preset_options = ["none"] + gender_presets
+    preset_options = ["none", "random"] + gender_presets
 
     class DynamicOutfitNode:
         _last_seed = 0
@@ -47,7 +47,8 @@ def create_outfit_node(gender: str):
         def INPUT_TYPES(cls):
             inputs = {
                 "required": {
-                    "preset": (preset_options, {"default": "none", "tooltip": "Choose a preset to auto-fill empty fields (none/random)"}),
+                    "preset": (preset_options, {"default": "none", "tooltip": "Choose a preset to auto-fill fields. Use 'random' to randomly select from all cultural and themed presets!"}),
+                    "preset_colors": ("BOOLEAN", {"default": True, "tooltip": "If OFF, preset fills only clothing types without colors (AI picks colors). If ON, uses preset colors exactly."}),
                     "avoid_terms": ("STRING", {"default": "", "multiline": True, "placeholder": "Things to exclude (e.g., blurry, low-res, extra fingers)"}),
                     "age_group": (age_groups_options, {"default": "random"}),
                     "character_name": ("STRING", {"default": "", "multiline": False}),
@@ -62,9 +63,9 @@ def create_outfit_node(gender: str):
                     "description_style": (description_styles, {"default": "random"}),
                     "creative_scale": (scale_options, {"default": "none"}),
                     "custom_attributes": ("STRING", {"default": "", "multiline": True, "placeholder": "Enter additional attributes..."}),
-                    "seed": ("INT", {"default": 0, "min": 0, "max": 2**32 - 1}),
-                    "style_seed": ("INT", {"default": 0, "min": 0, "max": 2**32 - 1, "tooltip": "Seed used to randomize outfit/style choices. 0 = follow image seed."}),
-                    "seed_mode": (["fixed", "random", "increment", "decrement"], {"default": "random"}),
+                    "seed": ("INT", {"default": 0, "min": 0, "max": 2**32 - 1, "tooltip": "Main seed for image generation. Controls final image output."}),
+                    "style_seed": ("INT", {"default": 0, "min": 0, "max": 2**32 - 1, "tooltip": "Separate seed for outfit/style randomization. Use 0 to follow main seed, or set different value to vary outfit while keeping same image seed."}),
+                    "seed_mode": (["fixed", "random", "increment", "decrement"], {"default": "random", "tooltip": "How the main seed behaves: fixed=use exact value, random=new each time, increment/decrement=step from last value"}),
                     "export_preset": ("BOOLEAN", {"default": False}),
                     "lock_preset_fields": ("BOOLEAN", {"default": False, "tooltip": "If on, also lock non-attire style fields (pose, background, etc.) to preset values"}),
                     "enable_cache": ("BOOLEAN", {"default": True, "tooltip": "Cache outputs for identical inputs (faster repeats)"}),
@@ -152,24 +153,49 @@ def create_outfit_node(gender: str):
 
             # Apply preset if selected
             selected_preset = kwargs.get("preset", "none")
-            if selected_preset and selected_preset != "none":
-                preset_map = presets_all.get(gender, {}).get(selected_preset, {})
-                if isinstance(preset_map, dict):
-                    unknown = [k for k in preset_map.keys() if k not in allowed_keys]
-                    if unknown:
-                        print(f"[Preset] '{selected_preset}' contains unknown keys: {unknown}")
-                    # When preset is selected, ignore overlapping inputs: mask them to control value so preset fills them
-                    masked = dict(kwargs)
-                    lock_all = bool(kwargs.get("lock_preset_fields", False))
-                    for k in preset_map.keys():
-                        if k in allowed_keys:
-                            masked[k] = "random"  # ensures apply_preset picks preset value
-                    # If strict lock is enabled, mask common non-attire style fields too
-                    if lock_all:
-                        for extra in ("pose", "background", "mood", "time_of_day", "weather", "color_scheme"):
-                            if extra in preset_map and extra in allowed_keys:
-                                masked[extra] = "random"
-                    kwargs = apply_preset(masked, preset_map)
+            use_preset_colors = bool(kwargs.get("preset_colors", True))
+            
+            if selected_preset and selected_preset not in ("none", ""):
+                # Handle random preset selection
+                if selected_preset == "random":
+                    available_presets = list(presets_all.get(gender, {}).keys())
+                    if available_presets:
+                        import random
+                        # Use style_seed if provided, otherwise use main seed for randomization
+                        preset_seed = int(kwargs.get("style_seed", 0)) or int(use_seed)
+                        random.seed(preset_seed)
+                        selected_preset = random.choice(available_presets)
+                        print(f"[Preset] Randomly selected: '{selected_preset}' (seed: {preset_seed})")
+                    else:
+                        selected_preset = "none"
+                
+                if selected_preset != "none":
+                    preset_map = presets_all.get(gender, {}).get(selected_preset, {})
+                    if isinstance(preset_map, dict):
+                        unknown = [k for k in preset_map.keys() if k not in allowed_keys]
+                        if unknown:
+                            print(f"[Preset] '{selected_preset}' contains unknown keys: {unknown}")
+                        
+                        if use_preset_colors:
+                            # Traditional preset behavior: use exact preset values including colors
+                            masked = dict(kwargs)
+                            lock_all = bool(kwargs.get("lock_preset_fields", False))
+                            for k in preset_map.keys():
+                                if k in allowed_keys:
+                                    masked[k] = "random"  # ensures apply_preset picks preset value
+                            # If strict lock is enabled, mask common non-attire style fields too
+                            if lock_all:
+                                for extra in ("pose", "background", "mood", "time_of_day", "weather", "color_scheme"):
+                                    if extra in preset_map and extra in allowed_keys:
+                                        masked[extra] = "random"
+                            kwargs = apply_preset(masked, preset_map)
+                            print(f"[Preset] Applied '{selected_preset}' with colors")
+                        else:
+                            # Outfit template behavior: extract clothing without colors
+                            outfit_template = extract_outfit_template(preset_map)
+                            if outfit_template:
+                                kwargs = apply_outfit_template(kwargs, outfit_template)
+                                print(f"[Preset] Applied '{selected_preset}' template (no colors) with items: {list(outfit_template.keys())}")
 
             style_seed = int(kwargs.get("style_seed", 0)) or int(use_seed)
             builder = PromptBuilder(seed=style_seed, data=kwargs, options=all_options)

@@ -1,5 +1,6 @@
 import json
 import random
+import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Union
 
@@ -129,3 +130,82 @@ def compose_negative_prompt(user_avoid_terms: str, auto_terms: List[str]) -> str
         if all(" ".join(x.split()).lower() != key for x in terms):
             terms.append(t)
     return ", ".join(terms)
+
+
+def extract_outfit_template(preset: Dict[str, Any]) -> Dict[str, str]:
+    """
+    Extract clothing items from a preset, removing color information.
+    
+    This function takes a preset and extracts only the clothing items,
+    removing color adjectives to create a template that allows for
+    random color selection by the AI.
+    
+    Args:
+        preset: Preset dictionary containing outfit information
+        
+    Returns:
+        Dictionary with clothing pieces without color information
+    """
+    # Define clothing-related body parts (exclude non-clothing items)
+    clothing_parts = {
+        "torso", "legs", "feet", "headgear", "neck", "ear", "fingers", 
+        "hand", "waist", "eyewear", "forearm", "arm"
+    }
+    
+    # Common color adjectives to remove
+    color_patterns = [
+        # Basic colors
+        r'\b(red|blue|green|yellow|orange|purple|pink|black|white|brown|gray|grey)\b',
+        # Extended colors
+        r'\b(navy|royal|emerald|crimson|scarlet|maroon|burgundy|turquoise|teal|coral|salmon)\b',
+        r'\b(beige|tan|khaki|olive|gold|silver|bronze|copper|rose|lavender|violet|indigo)\b',
+        # Descriptive colors
+        r'\b(dark|light|bright|pale|deep|rich|vibrant|neon|pastel|metallic|matte)\b',
+        # Color combinations
+        r'\b(multicolor|multicolored|rainbow|striped|checkered|plaid|floral|printed)\b',
+        # Material-based colors
+        r'\b(denim|leather|suede|silk|cotton|linen|wool|cashmere|velvet|satin)\s*(?=\w)',
+    ]
+    
+    template = {}
+    
+    for part, item in preset.items():
+        if part in clothing_parts and isinstance(item, str) and item.strip():
+            # Remove color information using regex patterns
+            cleaned_item = item.strip()
+            for pattern in color_patterns:
+                cleaned_item = re.sub(pattern, '', cleaned_item, flags=re.IGNORECASE)
+            
+            # Clean up extra spaces and normalize
+            cleaned_item = ' '.join(cleaned_item.split())
+            
+            # Only include if we still have meaningful content
+            if cleaned_item and len(cleaned_item) > 2:
+                template[part] = cleaned_item
+    
+    return template
+
+
+def apply_outfit_template(current: Dict[str, Any], template: Dict[str, str]) -> Dict[str, Any]:
+    """
+    Apply outfit template to current selection, filling only empty clothing fields.
+    
+    This differs from apply_preset by only applying clothing items and allowing
+    the AI to randomly select colors and other styling.
+    
+    Args:
+        current: Current selection dictionary
+        template: Outfit template with clothing items (no colors)
+        
+    Returns:
+        Updated selection with template clothing applied
+    """
+    result = dict(current)
+    
+    for part, item in template.items():
+        cur = result.get(part)
+        # Only apply if current value is empty or control value
+        if cur in (None, "", "none", "random"):
+            result[part] = item
+    
+    return result
