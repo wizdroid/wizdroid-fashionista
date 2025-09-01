@@ -78,3 +78,54 @@ def apply_preset(current: Dict[str, Any], preset: Dict[str, Any]) -> Dict[str, A
         if cur in (None, "", "none", "random"):
             result[k] = v
     return result
+
+
+def _split_terms(text: str) -> List[str]:
+    """Split a comma/semicolon separated string into normalized terms."""
+    if not isinstance(text, str) or not text.strip():
+        return []
+    raw = [t.strip() for t in text.replace(";", ",").split(",")]
+    # dedupe while preserving order
+    seen = set()
+    terms: List[str] = []
+    for t in raw:
+        if not t:
+            continue
+        # normalize simple spacing and lowercase for dedupe purposes
+        key = " ".join(t.split()).lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        terms.append(t)
+    return terms
+
+
+def clean_comma_separated_terms(text: str) -> str:
+    """
+    Clean a comma/semicolon separated string: trim, dedupe, and normalize spacing between terms.
+    Returns a comma+space separated list or empty string.
+    """
+    terms = _split_terms(text)
+    return ", ".join(terms)
+
+
+def compose_negative_prompt(user_avoid_terms: str, auto_terms: List[str]) -> str:
+    """
+    Combine user-provided avoid terms with automatically generated negatives, cleaning duplicates.
+
+    Args:
+        user_avoid_terms: Raw string from UI (comma/semicolon separated)
+        auto_terms: Additional terms computed by logic
+
+    Returns:
+        Cleaned comma-separated negative prompt string
+    """
+    terms = _split_terms(user_avoid_terms)
+    for t in auto_terms:
+        if not t:
+            continue
+        key = " ".join(t.split()).lower()
+        # We compare against lower-cased keys of existing terms
+        if all(" ".join(x.split()).lower() != key for x in terms):
+            terms.append(t)
+    return ", ".join(terms)

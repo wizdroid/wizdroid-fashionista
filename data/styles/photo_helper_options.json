@@ -1,0 +1,45 @@
+{
+  "outfit_vibes": [
+    "none", "random",
+    "modern", "retro", "vintage", "pinup", "goth", "punk", "grunge",
+    "boho", "minimalist", "preppy", "streetwear", "techwear", "formal"
+  ],
+  "photo_genres": [
+    "fashion", "glamour", "casual", "selfie", "portrait",
+    "passport", "editorial", "runway", "lifestyle", "street"
+  ],
+  "render_medium": [
+    "photorealistic", "2D anime", "2D cartoon", "manga", "comic",
+    "disney-like", "pixar-like", "illustration", "pixel art", "watercolor", "ink sketch"
+  ],
+  "toon_shading": ["auto", "cel shading", "flat shading", "painterly", "soft shading"],
+  "outline_style": ["auto", "bold outlines", "clean lineart", "sketchy lines", "no outlines"],
+  "face_proportions": ["natural", "semi-realistic", "stylized", "chibi"],
+  "frame_type": ["photo", "animation still", "poster", "character sheet", "turnaround", "sprite sheet"],
+  "character_templates": ["none", "character sheet", "turnaround", "sprite sheet"],
+  "camera_framing": ["close-up", "headshot", "bust", "waist-up", "three-quarter", "full-body"],
+  "lighting_styles": [
+    "softbox", "natural window light", "golden hour", "neon", "rim light",
+    "Rembrandt", "split lighting", "butterfly", "high-key", "low-key"
+  ],
+  "lenses": ["35mm", "50mm", "85mm", "105mm"],
+  "depth_of_field": ["deep", "moderate", "shallow", "very shallow"],
+  "aspect_ratios": ["1:1", "3:2", "4:3", "16:9", "9:16"],
+  "palettes": ["auto", "warm tones", "cool tones", "earth tones", "pastel", "neon", "monochromatic"],
+  "composition": ["rule of thirds", "centered symmetry", "leading lines", "frame within frame", "negative space"],
+  "quality": ["photorealistic", "studio quality", "film look", "digital crisp"],
+  "studio_backdrops": [
+    "White seamless paper",
+    "Grey seamless paper",
+    "Fashion runway",
+    "Color gradient backdrop",
+    "Plain wall"
+  ],
+  "toon_palettes": [
+    "vibrant",
+    "pastel",
+    "neon",
+    "muted",
+    "monochrome"
+  ]
+}

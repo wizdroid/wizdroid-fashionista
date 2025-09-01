@@ -25,6 +25,10 @@
     {"type": "kurta", "country": "India", "material": "cotton"},
     {"type": "dashiki", "country": "West Africa", "material": "cotton"},
     {"type": "guayabera", "country": "Cuba", "material": "cotton"},
-    {"type": "sarong", "country": "Southeast Asia", "material": "cotton"}
+    {"type": "sarong", "country": "Southeast Asia", "material": "cotton"},
+    {"type": "sequin blazer", "material": "sequin"},
+    {"type": "velvet dinner jacket", "material": "velvet"},
+    {"type": "satin dress shirt", "material": "satin"},
+    {"type": "open-collar silk shirt", "material": "silk"}
   ]
 }

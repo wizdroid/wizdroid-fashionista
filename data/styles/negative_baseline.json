@@ -1,0 +1,17 @@
+{
+  "negatives": [
+    "blurry",
+    "low-res",
+    "jpeg artifacts",
+    "watermark",
+    "text overlay",
+    "oversaturated",
+    "overexposed",
+    "underexposed",
+    "bad anatomy",
+    "extra limbs",
+    "missing fingers",
+    "extra fingers",
+    "duplicate body parts"
+  ]
+}

@@ -16,6 +16,8 @@
     {"type": "medal", "material": "metal"},
     {"type": "dogtag", "material": "metal"},
     {"type": "cravat", "country": "France", "material": "silk"},
-    {"type": "mala", "country": "India", "material": "beads"}
+    {"type": "mala", "country": "India", "material": "beads"},
+    {"type": "lapel pin", "material": "metal"},
+    {"type": "pocket square", "material": "silk"}
   ]
 }

@@ -26,3 +26,23 @@ def test_body_types():
     types = load_body_types(base)
     assert types[:2] == ["none", "random"]
     assert any(t for t in types if t not in ("none", "random"))
+
+
+def test_glamour_options_present():
+    data_root = Path(__file__).resolve().parent.parent / "data" / "outfit"
+    # Female torso should include at least one glam dress
+    with open(data_root / "female" / "torso.json", "r", encoding="utf-8") as f:
+        ft = json.load(f)
+    ftypes = {item.get("type", "") for item in ft.get("attire", []) if isinstance(item, dict)}
+    assert any("sequin" in t or "cocktail" in t or "bodycon" in t for t in ftypes)
+
+    # Male torso/legs include glam variants
+    with open(data_root / "male" / "torso.json", "r", encoding="utf-8") as f:
+        mt = json.load(f)
+    mtypes_torso = {item.get("type", "") for item in mt.get("attire", []) if isinstance(item, dict)}
+    assert any("sequin" in t or "velvet" in t or "satin" in t for t in mtypes_torso)
+
+    with open(data_root / "male" / "legs.json", "r", encoding="utf-8") as f:
+        ml = json.load(f)
+    mtypes_legs = {item.get("type", "") for item in ml.get("attire", []) if isinstance(item, dict)}
+    assert any("tuxedo" in t or "velvet" in t or "satin" in t for t in mtypes_legs)

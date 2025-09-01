@@ -24,6 +24,9 @@
     {"type": "kilt", "country": "Scotland", "material": "wool"},
     {"type": "hakama", "country": "Japan", "material": "silk"},
     {"type": "dhoti", "country": "India", "material": "cotton"},
-    {"type": "sarong", "country": "Southeast Asia", "material": "cotton"}
+    {"type": "sarong", "country": "Southeast Asia", "material": "cotton"},
+    {"type": "tuxedo trousers", "material": "wool"},
+    {"type": "satin trousers", "material": "satin"},
+    {"type": "velvet trousers", "material": "velvet"}
   ]
 }

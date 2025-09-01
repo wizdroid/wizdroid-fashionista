@@ -3,6 +3,7 @@
   "attire": [
     {"type": "wedding ring", "material": "gold"},
     {"type": "signet ring", "material": "gold"},
+    {"type": "cocktail ring", "material": "gemstone"},
     {"type": "class ring", "material": "gold"},
     {"type": "pinky ring", "material": "gold"},
     {"type": "thumb ring", "material": "silver"},

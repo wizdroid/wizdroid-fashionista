@@ -1,19 +1,6 @@
-# Core dependencies for ComfyUI Outfit Selection Node
-# No additional dependencies required for the main node
-
 # Optional dependencies for support nodes (Ollama Vision & LLM)
 requests>=2.25.0
 pillow>=8.0.0
 numpy>=1.19.0
 torch>=1.9.0
 
-# Development and testing dependencies
-pytest>=7.0.0
-pytest-cov>=4.0.0
-coverage>=6.0.0
-black>=22.0.0
-isort>=5.10.0
-flake8>=4.0.0
-mypy>=0.950
-pylint>=2.15.0
-bandit>=1.7.0

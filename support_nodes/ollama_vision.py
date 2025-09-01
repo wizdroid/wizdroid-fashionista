@@ -8,12 +8,12 @@ import io
 import json
 import os
 import random
-import requests
-from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
 from PIL import Image
+
+from ..utils.ollama_base import BaseOllamaNode
 
 
 def load_json_file(file_path: str, default: Any = None) -> Any:
@@ -26,7 +26,7 @@ def load_json_file(file_path: str, default: Any = None) -> Any:
         return default if default is not None else {}
 
 
-def safe_random_choice(options: List[str], exclude: List[str] = None) -> str:
+def safe_random_choice(options: List[str], exclude: Optional[List[str]] = None) -> str:
     """Safely select a random choice from options, excluding specified values."""
     if not options:
         return "none"
@@ -40,20 +40,7 @@ def safe_random_choice(options: List[str], exclude: List[str] = None) -> str:
     return random.choice(valid_options)
 
 
-def get_ollama_models(ollama_url: str, timeout: int = 5) -> List[str]:
-    """Fetch available Ollama models from the API."""
-    try:
-        tags_url = ollama_url.replace("/api/generate", "/api/tags")
-        response = requests.get(tags_url, timeout=timeout)
-        response.raise_for_status()
-        models_data = response.json()
-        return [model["name"] for model in models_data.get("models", [])]
-    except Exception as e:
-        print(f"[OllamaVisionNode] Could not fetch Ollama models: {e}")
-        return []
-
-
-class OptimizedOllamaVisionNode:
+class OptimizedOllamaVisionNode(BaseOllamaNode):
     """
     ComfyUI node for image description using local Ollama vision models.
     Refactored for enhanced maintainability, testability, and performance.
@@ -78,17 +65,6 @@ class OptimizedOllamaVisionNode:
         """Get the data directory path."""
         return os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
     
-    @staticmethod
-    def make_ollama_request(url: str, payload: Dict[str, Any]) -> Dict[str, Any]:
-        """Make request to Ollama API."""
-        try:
-            response = requests.post(url, json=payload, timeout=30)
-            response.raise_for_status()
-            return response.json()
-        except Exception as e:
-            print(f"[OllamaVisionNode] Request failed: {e}")
-            return {}
-
     @classmethod
     def get_ollama_vision_models(cls, ollama_url: str) -> List[str]:
         """
@@ -100,7 +76,7 @@ class OptimizedOllamaVisionNode:
         Returns:
             List of vision-capable model names
         """
-        all_models = get_ollama_models(ollama_url)
+        all_models = cls.get_ollama_models(ollama_url)
         
         if not all_models:
             return []
@@ -185,7 +161,7 @@ class OptimizedOllamaVisionNode:
                     ),
                     "description_style": (
                         ["none", "random"] + list(prompts.keys()),
-                        {"default": "detailed"},
+                        {"default": "sdxl"},
                     ),
                     "custom_prompt": (
                         "STRING",
@@ -243,7 +219,7 @@ class OptimizedOllamaVisionNode:
         available_styles = [key for key in prompts.keys() if key not in ["none", "random"]]
         
         if not available_styles:
-            return "detailed"
+            return "sdxl"
         
         return safe_random_choice(available_styles, exclude=["none", "random"])
 
@@ -262,8 +238,12 @@ class OptimizedOllamaVisionNode:
         """
         prompts = self._load_description_prompts()
         
-        # Get base prompt for the style
-        base_prompt = prompts.get(description_style, prompts.get("detailed", ""))
+        # Get base prompt for the style - handle nested structure
+        style_config = prompts.get(description_style, prompts.get("sdxl", {}))
+        if isinstance(style_config, dict):
+            base_prompt = style_config.get("instructions", "")
+        else:
+            base_prompt = style_config if isinstance(style_config, str) else ""
         
         # Build system prompt components
         system_components = [base_prompt]
@@ -282,7 +262,7 @@ class OptimizedOllamaVisionNode:
         self,
         image,
         model_name: str = "disabled",
-        description_style: str = "detailed",
+        description_style: str = "sdxl",
         custom_prompt: str = "",
         seed: int = 0,
         ollama_url: str = "http://127.0.0.1:11434/api/generate",

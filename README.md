@@ -7,6 +7,15 @@
 
 A comprehensive outfit generation system for ComfyUI with AI-powered prompt enhancement and dynamic outfit composition.
 
+## 📖 Table of Contents
+- [Features](#-features)
+- [Prerequisites](#-prerequisites)
+- [Installation](#-installation)
+- [Quick Start](#-quick-start)
+- [Data & Extensibility](#-data--extensibility)
+- [Project Structure](#-project-structure)
+- [License](#license)
+
 ## 🎯 Features
 
 ### 👗 Dynamic Outfit Generation
@@ -84,25 +93,23 @@ Notes:
 - Add items like lipstick, eyeliner, blush, highlighter, etc.
 - Use the Enable/Duplicate/Clear All controls for quick edits.
 
-## 📋 Requirements
+## 📋 Prerequisites
 
 ### Core Requirements
-- ComfyUI (latest version)
-- Python 3.8+
+- [ComfyUI](https://github.com/comfyanonymous/ComfyUI) (latest version recommended)
+- [Python](https://www.python.org/downloads/) 3.8+
 
 ### Optional Dependencies
-For AI prompt enhancement features:
+For AI prompt enhancement features, these packages are required. They can be installed by running:
 ```bash
-pip install requests pillow numpy torch
+pip install -r requirements.txt
 ```
 
 For vision node support:
-```bash
-# Install Ollama locally
-# Download vision models (llava, moondream, etc.)
-```
+- An Ollama installation is required.
+- You will also need to download vision models (e.g., `llava`, `moondream`).
 
-## License
+## 📦 Installation
 
 MIT License. See [LICENSE](LICENSE).
 
@@ -122,3 +129,17 @@ MIT License. See [LICENSE](LICENSE).
 ### Scene/Style Controls
 - Tunables include: `mood`, `time_of_day`, `weather`, `color_scheme`, `description_style`, and `creative_scale`.
 - Styles are defined under `data/styles/` and are easy to extend.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## 📁 Project Structure
+The project is organized as follows:
+- **`nodes/`**: Contains the core ComfyUI node implementations.
+- **`utils/`**: Shared utilities for data loading and prompt building.
+- **`data/`**: JSON files for outfits, presets, and styles.
+- **`web/`**: Custom UI components (CSS, JS).
+- **`tests/`**: Unit tests for the project.
+- **`__init__.py`**: Registers the custom nodes with ComfyUI.
+- **`requirements.txt`**: Lists the Python dependencies.
