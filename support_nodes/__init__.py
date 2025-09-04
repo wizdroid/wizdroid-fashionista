@@ -10,7 +10,7 @@ try:
     from .ollama_vision import OptimizedOllamaVisionNode
     VISION_NODE_AVAILABLE = True
 except ImportError as e:
-    print(f"[ComfyUI-Outfit] Vision node not available (missing dependencies): {e}")
+    print(f"[Wizdroid-Outfit] Vision node not available (missing dependencies): {e}")
     VISION_NODE_AVAILABLE = False
 
 SUPPORT_NODE_CLASS_MAPPINGS = {

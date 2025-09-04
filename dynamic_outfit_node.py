@@ -115,7 +115,7 @@ def create_outfit_node(gender: str):
         # 3: metadata JSON (STRING)
         RETURN_TYPES = ("STRING", "INT", "STRING", "STRING")
         FUNCTION = "process"
-        CATEGORY = f"👗 Outfit/{gender.capitalize()}"
+        CATEGORY = f"Wizdroid/Outfits/{gender.capitalize()}"
 
         def process(self, **kwargs):
             """Process inputs and build the prompt."""

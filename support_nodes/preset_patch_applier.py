@@ -29,7 +29,7 @@ class PresetPatchApplierNode:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("merged_json",)
     FUNCTION = "apply"
-    CATEGORY = "👗 Outfit/Helpers"
+    CATEGORY = "Wizdroid/Outfits/Helpers"
 
     def apply(self, preset_patch_json: str, existing_json: str = "{}"):
         def _parse(s: str) -> Dict[str, Any]:

@@ -161,3 +161,18 @@ def load_presets(data_dir: Path) -> Dict[str, Dict[str, Dict[str, str]]]:
     file_path = data_dir / "presets.json"
     data = load_json_file(file_path, {})
     return data if isinstance(data, dict) else {}
+
+
+def load_gender_presets(gender_data_dir: Path) -> Dict[str, Dict[str, str]]:
+    """
+    Load presets for a specific gender from outfit/{gender}/presets.json.
+    
+    Args:
+        gender_data_dir: Directory containing gender-specific outfit data (e.g., data/outfit/female)
+        
+    Returns:
+        Dictionary mapping preset names to their field values
+    """
+    file_path = gender_data_dir / "presets.json"
+    data = load_json_file(file_path, {})
+    return data if isinstance(data, dict) else {}

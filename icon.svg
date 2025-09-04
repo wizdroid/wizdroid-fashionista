@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Dress/Outfit shape -->
+  <path d="M20 12 L24 8 L40 8 L44 12 L44 16 L48 20 L48 56 L16 56 L16 20 L20 16 Z" 
+        fill="url(#grad1)" stroke="#4a5568" stroke-width="1.5"/>
+  
+  <!-- Collar/Neckline -->
+  <path d="M24 8 L32 12 L40 8" fill="none" stroke="#4a5568" stroke-width="1.5"/>
+  
+  <!-- Waist belt -->
+  <rect x="20" y="28" width="24" height="3" fill="#4a5568" rx="1"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="32" cy="20" r="2" fill="#f7fafc"/>
+  <circle cx="28" cy="24" r="1.5" fill="#f7fafc"/>
+  <circle cx="36" cy="24" r="1.5" fill="#f7fafc"/>
+  
+  <!-- Magic sparkles -->
+  <path d="M10 10 L12 8 L10 6 L8 8 Z" fill="#ffd700"/>
+  <path d="M54 14 L56 12 L54 10 L52 12 Z" fill="#ffd700"/>
+  <path d="M52 50 L54 48 L52 46 L50 48 Z" fill="#ffd700"/>
+  <path d="M12 50 L14 48 L12 46 L10 48 Z" fill="#ffd700"/>
+</svg>

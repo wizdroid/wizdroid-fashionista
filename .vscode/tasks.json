@@ -1,0 +1,64 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Python: Lint (flake8)",
+      "type": "shell",
+      "command": "${workspaceFolder}/../../.venv/Scripts/python.exe",
+      "args": ["-m", "flake8", "."],
+      "problemMatcher": [
+        {
+          "owner": "python",
+          "fileLocation": ["relative", "${workspaceFolder}"],
+          "pattern": {
+            "regexp": "^(.*?):(\\d+):(\\d+): (\\w\\d+) (.*)$",
+            "file": 1,
+            "line": 2,
+            "column": 3,
+            "code": 4,
+            "message": 5
+          }
+        }
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Python: Typecheck (mypy)",
+      "type": "shell",
+      "command": "${workspaceFolder}/../../.venv/Scripts/python.exe",
+      "args": ["-m", "mypy", "."],
+      "problemMatcher": [
+        {
+          "owner": "python",
+          "fileLocation": ["relative", "${workspaceFolder}"],
+          "pattern": {
+            "regexp": "^(.*?)(?::|\\()(?:(\\d+)(?::(\\d+))?)?\u003a (error|note): (.*)$",
+            "file": 1,
+            "line": 2,
+            "column": 3,
+            "severity": 4,
+            "message": 5
+          }
+        }
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Python: Test (pytest)",
+      "type": "shell",
+      "command": "${workspaceFolder}/../../.venv/Scripts/python.exe",
+      "args": ["-m", "pytest", "-q"],
+      "problemMatcher": [
+        {
+          "owner": "python",
+          "fileLocation": ["relative", "${workspaceFolder}"],
+          "pattern": {
+            "regexp": "^_+ (.*) _+$",
+            "message": 1
+          }
+        }
+      ],
+      "group": "test"
+    }
+  ]
+}

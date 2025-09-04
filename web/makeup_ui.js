@@ -14,11 +14,11 @@ const MakeupAPI = {
     async getUiOptions() {
         try {
             const data = await this._fetchJSON(`/custom_nodes/comfyui-outfit/data/ui_options.json`);
-            console.log("[ComfyUI-Outfit] Loaded UI options:", data);
+            console.log("[Wizdroid-Outfit] Loaded UI options:", data);
             
             // Ensure we have the makeup_colors array
             if (!data || !Array.isArray(data.makeup_colors)) {
-                console.warn("[ComfyUI-Outfit] makeup_colors not found, using fallback");
+                console.warn("[Wizdroid-Outfit] makeup_colors not found, using fallback");
                 return { 
                     colors: ["none", "red", "pink", "peach", "nude", "berry", "coral", "rose", "brown", "black", "clear", "gold", "silver", "bronze", "taupe", "smoky", "colorful", "white", "purple", "blue", "green", "yellow", "orange", "maroon", "magenta", "cyan", "lime", "navy", "olive", "teal", "gray", "light", "medium", "dark", "deep", "bright", "matte", "glossy", "metallic", "shimmer", "natural", "warm", "cool", "neutral", "transparent", "opaque", "sheer"], 
                     intensities: ["none", "light", "medium", "heavy"] 
@@ -27,10 +27,10 @@ const MakeupAPI = {
             
             const colors = ["none", ...data.makeup_colors];
             const intensities = ["none", ...(data.makeup_intensities || ["light", "medium", "heavy"])];
-            console.log("[ComfyUI-Outfit] Final colors:", colors.length, "items");
+            console.log("[Wizdroid-Outfit] Final colors:", colors.length, "items");
             return { colors, intensities };
         } catch (e) {
-            console.warn("[ComfyUI-Outfit] Using fallback UI options due to error:", e);
+            console.warn("[Wizdroid-Outfit] Using fallback UI options due to error:", e);
             return { 
                 colors: ["none", "red", "pink", "peach", "nude", "berry", "coral", "rose", "brown", "black", "clear", "gold", "silver", "bronze", "taupe", "smoky", "colorful", "white", "purple", "blue", "green", "yellow", "orange", "maroon", "magenta", "cyan", "lime", "navy", "olive", "teal", "gray", "light", "medium", "dark", "deep", "bright", "matte", "glossy", "metallic", "shimmer", "natural", "warm", "cool", "neutral", "transparent", "opaque", "sheer"], 
                 intensities: ["none", "light", "medium", "heavy"] 
@@ -46,7 +46,7 @@ const MakeupAPI = {
             const types = ["none", ...(typesData.attire?.map(item => item.type) || [])];
             return { types, colors: ui.colors, intensities: ui.intensities };
         } catch (error) {
-            console.error("[ComfyUI-Outfit] Error loading makeup data:", error);
+            console.error("[Wizdroid-Outfit] Error loading makeup data:", error);
             return {
                 types: ["none", "lipstick", "eyeshadow", "blush"],
                 colors: ["none", "red", "pink", "nude"],

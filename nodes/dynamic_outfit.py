@@ -16,7 +16,7 @@ from ..utils.prompt_builder import PromptBuilder
 from ..utils.common import apply_preset, extract_outfit_template, apply_outfit_template
 
 # Constants
-OUTFIT_CATEGORY = "👗 Outfit"
+OUTFIT_CATEGORY = "Wizdroid/Outfits"
 NODE_CACHE = {}
 
 def create_outfit_node(gender: str):

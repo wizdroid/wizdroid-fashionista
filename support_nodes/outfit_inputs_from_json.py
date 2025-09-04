@@ -55,7 +55,7 @@ def create_bridge_node(gender: str):
         RETURN_TYPES = tuple(["STRING"] * len(ordered_keys))
         RETURN_NAMES = tuple(ordered_keys)
         FUNCTION = "map"
-        CATEGORY = f"👗 Outfit/Helpers/{gender.capitalize()}"
+        CATEGORY = f"Wizdroid/Outfits/Helpers/{gender.capitalize()}"
 
         def map(self, merged_json: str):
             try:

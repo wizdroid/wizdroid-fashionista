@@ -105,7 +105,7 @@ class PhotoStyleHelperNode:
         "guidance_json",
     )
     FUNCTION = "build"
-    CATEGORY = "👗 Outfit/Helpers"
+    CATEGORY = "Wizdroid/Outfits/Support"
 
     def build(self, **kw):
         import json

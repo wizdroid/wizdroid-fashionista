@@ -1,9 +1,13 @@
-# ComfyUI Outfit Selection
+# Wizdroid ComfyUI Outfit Selection
+
+<p align="center">
+  <img src="icon.svg" alt="Wizdroid Outfits" width="64" height="64">
+</p>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![ComfyUI](https://img.shields.io/badge/ComfyUI-Compatible-brightgreen.svg)](https://github.com/comfyanonymous/ComfyUI)
-[![GitHub release](https://img.shields.io/github/release/manifestations/comfyui-outfit.svg)](https://github.com/manifestations/comfyui-outfit/releases)
+[![GitHub release](https://img.shields.io/github/release/wizdroid/comfyui-outfit.svg)](https://github.com/wizdroid/comfyui-outfit/releases)
 
 A comprehensive outfit generation system for ComfyUI with AI-powered prompt enhancement and dynamic outfit composition.
 
@@ -45,11 +49,11 @@ A comprehensive outfit generation system for ComfyUI with AI-powered prompt enha
 ### Method 1: Git Clone (Recommended)
 ```bash
 cd ComfyUI/custom_nodes/
-git clone https://github.com/manifestations/comfyui-outfit.git
+git clone https://github.com/wizdroid/comfyui-outfit.git
 ```
 
 ### Method 2: Manual Download
-1. Download the latest release from the [Releases](https://github.com/manifestations/comfyui-outfit/releases) page
+1. Download the latest release from the [Releases](https://github.com/wizdroid/comfyui-outfit/releases) page
 2. Extract to `ComfyUI/custom_nodes/comfyui-outfit/`
 
 ### Method 3: ComfyUI Manager
@@ -61,7 +65,7 @@ git clone https://github.com/manifestations/comfyui-outfit.git
 
 ### Basic Usage
 1. Start ComfyUI
-2. Look for nodes under **👗 Outfit** category:
+2. Look for nodes under **Wizdroid/Outfits** category:
    - **Female Outfit Node**: Generate female outfits
    - **Male Outfit Node**: Generate male outfits
    - **Ollama Prompter**: Enhance prompts with AI

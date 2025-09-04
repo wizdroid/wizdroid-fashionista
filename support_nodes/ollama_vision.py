@@ -22,7 +22,7 @@ def load_json_file(file_path: str, default: Any = None) -> Any:
         with open(file_path, "r", encoding="utf-8") as f:
             return json.load(f)
     except (FileNotFoundError, json.JSONDecodeError, OSError) as e:
-        print(f"[ComfyUI-Outfit] Error loading {file_path}: {e}")
+        print(f"[Wizdroid-Outfit] Error loading {file_path}: {e}")
         return default if default is not None else {}
 
 
@@ -194,7 +194,7 @@ class OptimizedOllamaVisionNode(BaseOllamaNode):
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("description",)
     FUNCTION = "describe_image"
-    CATEGORY = "👗 Outfit/Support"
+    CATEGORY = "Wizdroid/Outfits/Support"
     NAME = "Optimized Ollama Vision"
 
     def _select_description_style(self, description_style: str, seed: int) -> str:

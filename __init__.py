@@ -1,4 +1,4 @@
-"""Top-level package initializer for comfyui-outfit.
+"""Top-level package initializer for wizdroid-outfit.
 
 This file is imported by ComfyUI as a plugin package. It may also be imported
 directly by tooling (e.g., pytest collection). To be robust in both contexts,
@@ -16,6 +16,10 @@ from .nodes.dynamic_outfit import (
     NODE_CLASS_MAPPINGS as dynamic_outfit_mappings,
     NODE_DISPLAY_NAME_MAPPINGS as dynamic_outfit_display_mappings,
 )
+from .nodes.preset_outfit_node import (
+    NODE_CLASS_MAPPINGS as preset_outfit_mappings,
+    NODE_DISPLAY_NAME_MAPPINGS as preset_outfit_display_mappings,
+)
 from .support_nodes import SUPPORT_NODE_CLASS_MAPPINGS, SUPPORT_NODE_DISPLAY_NAME_MAPPINGS
 
 # Set up logging
@@ -31,6 +35,11 @@ if dynamic_outfit_mappings and dynamic_outfit_display_mappings:
     NODE_CLASS_MAPPINGS.update(dynamic_outfit_mappings)
     NODE_DISPLAY_NAME_MAPPINGS.update(dynamic_outfit_display_mappings)
     logger.info("ComfyUI Outfit: Loaded dynamic outfit nodes")
+
+if preset_outfit_mappings and preset_outfit_display_mappings:
+    NODE_CLASS_MAPPINGS.update(preset_outfit_mappings)
+    NODE_DISPLAY_NAME_MAPPINGS.update(preset_outfit_display_mappings)
+    logger.info("ComfyUI Outfit: Loaded preset outfit nodes")
 
 # Load support nodes
 if SUPPORT_NODE_CLASS_MAPPINGS and SUPPORT_NODE_DISPLAY_NAME_MAPPINGS:

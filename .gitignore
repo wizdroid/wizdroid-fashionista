@@ -129,7 +129,9 @@ dmypy.json
 .pyre/
 
 # IDE files
-.vscode/
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
 .idea/
 *.swp
 *.swo
@@ -155,3 +157,27 @@ output/
 # Local test files
 test_local.py
 temp_test.py
+*_backup.json
+*_combined_backup.json
+
+# Development and debugging
+debug_*.py
+scratch_*.py
+*.bak
+*.orig
+*.rej
+.coverage*
+*.prof
+
+# Node.js (if any frontend development)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Backup files
+*~
+*.swp
+*.swo
+\#*\#
+.\#*
