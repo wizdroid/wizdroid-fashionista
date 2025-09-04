@@ -26,8 +26,8 @@ Thank you for your interest in contributing to this project! This document provi
 1. **Fork the repository** on GitHub
 2. **Clone your fork** locally:
    ```bash
-   git clone https://github.com/wizdroid/comfyui-outfit.git
-   cd comfyui-outfit
+   git clone https://github.com/wizdroid/wizdroid-fashionista.git
+   cd wizdroid-fashionista
    ```
 3. **Create a feature branch**:
    ```bash

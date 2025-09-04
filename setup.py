@@ -14,7 +14,7 @@ def setup_project():
     # Check if we're in the right directory
     current_dir = Path.cwd()
     if not (current_dir / "dynamic_outfit_node.py").exists():
-        print("Error: Please run this script from the comfyui-outfit directory")
+        print("Error: Please run this script from the wizdroid-fashionista directory")
         return False
 
     # Verify data structure

@@ -1,5 +1,5 @@
 {
-  "name": "wizdroid-comfyui-outfit",
+  "name": "wizdroid-fashionista",
   "version": "2.0.0",
   "description": "A comprehensive outfit generation system for ComfyUI with AI-powered prompt enhancement and dynamic outfit composition",
   "main": "dynamic_outfit_node.py",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wizdroid/comfyui-outfit.git"
+    "url": "https://github.com/wizdroid/wizdroid-fashionista.git"
   },
   "keywords": [
     "comfyui",
@@ -33,9 +33,9 @@
   "author": "Wizdroid Team",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wizdroid/comfyui-outfit/issues"
+    "url": "https://github.com/wizdroid/wizdroid-fashionista/issues"
   },
-  "homepage": "https://github.com/wizdroid/comfyui-outfit#readme",
+  "homepage": "https://github.com/wizdroid/wizdroid-fashionista#readme",
   "dependencies": {},
   "devDependencies": {},
   "engines": {

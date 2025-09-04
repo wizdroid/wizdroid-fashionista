@@ -13,7 +13,7 @@ const MakeupAPI = {
     },
     async getUiOptions() {
         try {
-            const data = await this._fetchJSON(`/custom_nodes/comfyui-outfit/data/ui_options.json`);
+            const data = await this._fetchJSON(`/custom_nodes/wizdroid-fashionista/data/ui_options.json`);
             console.log("[Wizdroid-Outfit] Loaded UI options:", data);
             
             // Ensure we have the makeup_colors array
@@ -41,7 +41,7 @@ const MakeupAPI = {
         try {
             const [ui, typesData] = await Promise.all([
                 this.getUiOptions(),
-                this._fetchJSON(`/custom_nodes/comfyui-outfit/data/outfit/${gender}/makeup.json`),
+                this._fetchJSON(`/custom_nodes/wizdroid-fashionista/data/outfit/${gender}/makeup.json`),
             ]);
             const types = ["none", ...(typesData.attire?.map(item => item.type) || [])];
             return { types, colors: ui.colors, intensities: ui.intensities };

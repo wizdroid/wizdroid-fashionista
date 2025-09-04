@@ -7,7 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![ComfyUI](https://img.shields.io/badge/ComfyUI-Compatible-brightgreen.svg)](https://github.com/comfyanonymous/ComfyUI)
-[![GitHub release](https://img.shields.io/github/release/wizdroid/comfyui-outfit.svg)](https://github.com/wizdroid/comfyui-outfit/releases)
+[![GitHub release](https://img.shields.io/github/release/wizdroid/wizdroid-fashionista.svg)](https://github.com/wizdroid/wizdroid-fashionista/releases)
 
 A comprehensive outfit generation system for ComfyUI with AI-powered prompt enhancement and dynamic outfit composition.
 
@@ -49,12 +49,12 @@ A comprehensive outfit generation system for ComfyUI with AI-powered prompt enha
 ### Method 1: Git Clone (Recommended)
 ```bash
 cd ComfyUI/custom_nodes/
-git clone https://github.com/wizdroid/comfyui-outfit.git
+git clone https://github.com/wizdroid/wizdroid-fashionista.git
 ```
 
 ### Method 2: Manual Download
-1. Download the latest release from the [Releases](https://github.com/wizdroid/comfyui-outfit/releases) page
-2. Extract to `ComfyUI/custom_nodes/comfyui-outfit/`
+1. Download the latest release from the [Releases](https://github.com/wizdroid/wizdroid-fashionista/releases) page
+2. Extract to `ComfyUI/custom_nodes/wizdroid-fashionista/`
 
 ### Method 3: ComfyUI Manager
 1. Open ComfyUI Manager

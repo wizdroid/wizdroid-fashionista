@@ -50,12 +50,12 @@ jobs:
           ### Method 1: Git Clone
           ```bash
           cd ComfyUI/custom_nodes/
-          git clone https://github.com/wizdroid/comfyui-outfit.git
+          git clone https://github.com/wizdroid/wizdroid-fashionista.git
           ```
           
           ### Method 2: Manual Download
           1. Download the zip file below
-          2. Extract to `ComfyUI/custom_nodes/comfyui-outfit/`
+          2. Extract to `ComfyUI/custom_nodes/wizdroid-fashionista/`
           3. Restart ComfyUI
           
           ## Requirements
@@ -71,6 +71,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./dist/comfyui-outfit-*.tar.gz
-        asset_name: comfyui-outfit-${{ github.ref_name }}.tar.gz
+        asset_path: ./dist/wizdroid-fashionista-*.tar.gz
+        asset_name: wizdroid-fashionista-${{ github.ref_name }}.tar.gz
         asset_content_type: application/gzip
