@@ -1,6 +1,6 @@
 {
   "name": "wizdroid-fashionista",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "A comprehensive outfit generation system for ComfyUI with AI-powered prompt enhancement and dynamic outfit composition",
   "main": "dynamic_outfit_node.py",
   "scripts": {
