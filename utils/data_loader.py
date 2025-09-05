@@ -154,13 +154,23 @@ def load_scale_options(styles_dir: Path) -> List[str]:
 
 def load_presets(data_dir: Path) -> Dict[str, Dict[str, Dict[str, str]]]:
     """
-    Load presets from data/presets.json structured as {gender: {preset_name: mappings}}.
+    Load presets from individual gender files in data/outfit/{gender}/presets.json
+    and combine them into {gender: {preset_name: mappings}} structure.
 
     Returns a dict mapping gender to preset name to field:value mapping.
     """
-    file_path = data_dir / "presets.json"
-    data = load_json_file(file_path, {})
-    return data if isinstance(data, dict) else {}
+    outfit_dir = data_dir / "outfit"
+    combined_presets = {}
+
+    # Load presets for each gender
+    for gender_dir in outfit_dir.iterdir():
+        if gender_dir.is_dir():
+            gender = gender_dir.name
+            gender_presets = load_gender_presets(gender_dir)
+            if gender_presets:
+                combined_presets[gender] = gender_presets
+
+    return combined_presets
 
 
 def load_gender_presets(gender_data_dir: Path) -> Dict[str, Dict[str, str]]:

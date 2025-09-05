@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **Character Sheet Generator**: New support node (`Character Sheet Generator`) for creating detailed prompts for character turnarounds, expression sheets, and action poses.
+
 
 ## [2.0.1] - 2025-08-28
 

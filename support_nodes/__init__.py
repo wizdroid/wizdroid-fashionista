@@ -3,6 +3,7 @@ from .ollama_llm import OptimizedOllamaLLMNode
 from .simple_ollama import OptimizedSimpleOllamaNode
 from .style_helper import PhotoStyleHelperNode
 from .preset_patch_applier import PresetPatchApplierNode
+from .character_sheet_generator import CharacterSheetGeneratorNode
 from .outfit_inputs_from_json import NODE_CLASS_MAPPINGS as JSON_NODE_CLASS_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS as JSON_NODE_DISPLAY
 
 # Try to import vision node - it has additional dependencies
@@ -18,6 +19,7 @@ SUPPORT_NODE_CLASS_MAPPINGS = {
     "SimpleOllamaNode": OptimizedSimpleOllamaNode,
     "PhotoStyleHelperNode": PhotoStyleHelperNode,
     "PresetPatchApplierNode": PresetPatchApplierNode,
+    "CharacterSheetGeneratorNode": CharacterSheetGeneratorNode,
 }
 
 SUPPORT_NODE_DISPLAY_NAME_MAPPINGS = {
@@ -25,6 +27,7 @@ SUPPORT_NODE_DISPLAY_NAME_MAPPINGS = {
     "SimpleOllamaNode": "🎯 Simple Ollama",
     "PhotoStyleHelperNode": "📸 Photo Style Helper",
     "PresetPatchApplierNode": "🧩 Preset Patch Applier",
+    "CharacterSheetGeneratorNode": "👤 Character Sheet Generator",
 }
 
 # Add vision node if available
