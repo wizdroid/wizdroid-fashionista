@@ -13,7 +13,7 @@ def setup_project():
 
     # Check if we're in the right directory
     current_dir = Path.cwd()
-    if not (current_dir / "dynamic_outfit_node.py").exists():
+    if not (current_dir / "__init__.py").exists():
         print("Error: Please run this script from the wizdroid-fashionista directory")
         return False
 
@@ -25,8 +25,8 @@ def setup_project():
 
     # Check for required files
     required_files = [
-        "dynamic_outfit_node.py",
         "__init__.py",
+        "nodes/dynamic_outfit.py",
         # global data
         "data/backgrounds.json",
         "data/race.json",

@@ -1,6 +1,9 @@
-# Optional dependencies for support nodes (Ollama Vision & LLM)
+# Core dependencies for AI and vision features
 requests>=2.25.0
 pillow>=8.0.0
 numpy>=1.19.0
-torch>=1.9.0
+
+# Note: torch is assumed to be available in ComfyUI environment
+# but can be installed separately if needed:
+# torch>=1.9.0
 
