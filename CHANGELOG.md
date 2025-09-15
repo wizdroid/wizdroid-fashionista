@@ -7,8 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2025-09-15
+
 ### Added
-- **Character Sheet Generator**: New support node (`Character Sheet Generator`) for creating detailed prompts for character turnarounds, expression sheets, and action poses.
+- **Character Sheet Generator**: New support node (`👤 Character Sheet Generator`) for creating detailed prompts for character turnarounds, expression sheets, and action poses
+- **Comprehensive README**: Updated documentation with detailed node descriptions, workflow examples, and project structure
+- **Enhanced Node Organization**: Improved categorization with emoji icons for better UX
+
+### Changed
+- **Project Structure**: Moved core outfit logic from root `dynamic_outfit_node.py` to organized `nodes/dynamic_outfit.py`
+- **Requirements Optimization**: Streamlined `requirements.txt` to include only essential dependencies (requests, pillow, numpy)
+- **Documentation Overhaul**: Complete README.md restructure with current node listings and usage examples
+
+### Removed
+- **Redundant Files**: Removed `dynamic_outfit_node.py` from root (replaced by `nodes/dynamic_outfit.py`)
+- **Backup Files**: Cleaned up `data/presets_backup.json` and `data/presets_combined_backup.json`
+- **Unused Dependencies**: Moved `torch` to optional since it's assumed available in ComfyUI environment
+
+### Fixed
+- **Setup Script**: Updated `setup.py` to reference correct node file paths after restructuring
 
 
 ## [2.0.1] - 2025-08-28
