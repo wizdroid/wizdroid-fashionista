@@ -3,7 +3,12 @@ requests>=2.25.0
 pillow>=8.0.0
 numpy>=1.19.0
 
+# Lightweight AI models (optional - for Lightweight Prompter node)
+transformers>=4.35.0
+torch>=1.9.0
+accelerate>=0.21.0
+
 # Note: torch is assumed to be available in ComfyUI environment
-# but can be installed separately if needed:
-# torch>=1.9.0
+# but may need to be installed separately for the Lightweight Prompter
+# Additional models will be downloaded automatically on first use
 

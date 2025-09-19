@@ -6,6 +6,14 @@ from .preset_patch_applier import PresetPatchApplierNode
 from .character_sheet_generator import CharacterSheetGeneratorNode
 from .outfit_inputs_from_json import NODE_CLASS_MAPPINGS as JSON_NODE_CLASS_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS as JSON_NODE_DISPLAY
 
+# Try to import lightweight prompter - it has additional dependencies
+try:
+    from .lightweight_prompter import LightweightPrompterNode
+    LIGHTWEIGHT_PROMPTER_AVAILABLE = True
+except ImportError as e:
+    print(f"[Wizdroid-Outfit] Lightweight Prompter not available (missing dependencies): {e}")
+    LIGHTWEIGHT_PROMPTER_AVAILABLE = False
+
 # Try to import vision node - it has additional dependencies
 try:
     from .ollama_vision import OptimizedOllamaVisionNode
@@ -29,6 +37,11 @@ SUPPORT_NODE_DISPLAY_NAME_MAPPINGS = {
     "PresetPatchApplierNode": "🧩 Preset Patch Applier",
     "CharacterSheetGeneratorNode": "👤 Character Sheet Generator",
 }
+
+# Add lightweight prompter if available
+if LIGHTWEIGHT_PROMPTER_AVAILABLE:
+    SUPPORT_NODE_CLASS_MAPPINGS["LightweightPrompterNode"] = LightweightPrompterNode
+    SUPPORT_NODE_DISPLAY_NAME_MAPPINGS["LightweightPrompterNode"] = "🚀 Lightweight Prompter"
 
 # Add vision node if available
 if VISION_NODE_AVAILABLE:
