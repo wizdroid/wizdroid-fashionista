@@ -14,6 +14,14 @@ except ImportError as e:
     print(f"[Wizdroid-Outfit] Lightweight Prompter not available (missing dependencies): {e}")
     LIGHTWEIGHT_PROMPTER_AVAILABLE = False
 
+# Try to import lightweight vision - it has additional dependencies
+try:
+    from .lightweight_vision import LightweightVisionNode
+    LIGHTWEIGHT_VISION_AVAILABLE = True
+except ImportError as e:
+    print(f"[Wizdroid-Outfit] Lightweight Vision not available (missing dependencies): {e}")
+    LIGHTWEIGHT_VISION_AVAILABLE = False
+
 # Try to import vision node - it has additional dependencies
 try:
     from .ollama_vision import OptimizedOllamaVisionNode
@@ -42,6 +50,11 @@ SUPPORT_NODE_DISPLAY_NAME_MAPPINGS = {
 if LIGHTWEIGHT_PROMPTER_AVAILABLE:
     SUPPORT_NODE_CLASS_MAPPINGS["LightweightPrompterNode"] = LightweightPrompterNode
     SUPPORT_NODE_DISPLAY_NAME_MAPPINGS["LightweightPrompterNode"] = "🚀 Lightweight Prompter"
+
+# Add lightweight vision if available
+if LIGHTWEIGHT_VISION_AVAILABLE:
+    SUPPORT_NODE_CLASS_MAPPINGS["LightweightVisionNode"] = LightweightVisionNode
+    SUPPORT_NODE_DISPLAY_NAME_MAPPINGS["LightweightVisionNode"] = "👁️ Lightweight Vision"
 
 # Add vision node if available
 if VISION_NODE_AVAILABLE:
