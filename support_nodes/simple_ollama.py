@@ -71,7 +71,7 @@ class OptimizedSimpleOllamaNode:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("formatted_prompt",)
     FUNCTION = "generate_prompt"
-    CATEGORY = "Wizdroid/Outfits/Support"
+    CATEGORY = "Wizdroid/Outfits/AI"
     NAME = "Simple Ollama Prompter"
 
     def generate_prompt(
