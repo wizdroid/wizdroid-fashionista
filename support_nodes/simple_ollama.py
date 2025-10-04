@@ -60,7 +60,7 @@ class OptimizedSimpleOllamaNode:
             "required": {
                 "custom_data": ("STRING", {"multiline": True, "default": ""}),
                 "model_name": (["disabled"] + cls._cached_models, {"default": "disabled"}),
-                "prompt_style": (["SDXL", "Flux"], {"default": "SDXL"}),
+                "prompt_style": (["SDXL", "Flux", "Flux Kontext"], {"default": "SDXL"}),
             },
             "optional": {
                 "ollama_url": ("STRING", {"default": "http://127.0.0.1:11434/api/generate"}),
@@ -125,6 +125,10 @@ class OptimizedSimpleOllamaNode:
             # Flux prefers concise, natural language
             formatted_data = formatted_data.replace(", ", " ")
             formatted_data = f"A detailed image of {formatted_data}"
+        elif prompt_style == "Flux Kontext":
+            # Flux Kontext preserves face/race/expression, changes other elements
+            formatted_data = formatted_data.replace(", ", " ")
+            formatted_data = f"A detailed image of {formatted_data}, maintaining the original facial features, race, and expression"
         else:
             # SDXL uses weighted prompt format
             if not formatted_data.endswith(('.', '!', '?')):
@@ -155,6 +159,8 @@ class OptimizedSimpleOllamaNode:
         # Build style-specific system prompt
         if prompt_style == "Flux":
             system_prompt = self._build_flux_system_prompt()
+        elif prompt_style == "Flux Kontext":
+            system_prompt = self._build_flux_kontext_system_prompt()
         else:
             system_prompt = self._build_sdxl_system_prompt()
         
@@ -204,5 +210,22 @@ class OptimizedSimpleOllamaNode:
             "Keep the prompt under 100 tokens for optimal performance.",
             "Output only the prompt without any additional text or title.",
             "Example: A young woman with short black hair sits on a wooden bench in a sunlit park, surrounded by blooming cherry blossom trees. She wears a blue denim jacket and white sneakers, reading a red book. The scene is bright and cheerful, with soft morning light and gentle shadows."
+        ]
+        return self.build_system_prompt(components)
+    
+    def _build_flux_kontext_system_prompt(self) -> str:
+        """Build system prompt for Flux Kontext formatting with face/race/expression preservation."""
+        components = [
+            "You are an expert at creating Flux image generation prompts for outfit and scene changes while preserving identity.",
+            "Transform the input into a highly specific, natural description suitable for Flux that MAINTAINS the original person's facial features, race, and expression.",
+            "CRITICAL: Always preserve the subject's face, facial structure, skin tone, race, ethnicity, and emotional expression EXACTLY as described or implied.",
+            "Focus on changing ONLY: hairstyle, hair color, clothing, accessories, background, environment, lighting, pose, and scene elements.",
+            "Start with the main subject preserving their identity, then describe new clothing, environment, and scene details.",
+            "Be concrete about outfit changes: specify colors, clothing styles, accessories, and fashion details.",
+            "Include new background, lighting, and mood while keeping the person's core identity intact.",
+            "Use complete, natural sentences that clearly distinguish between preserved features (face/race/expression) and changeable elements (clothes/hair/background).",
+            "Keep the prompt under 100 tokens for optimal performance.",
+            "Output only the prompt without any additional text or title.",
+            "Example: The same person with identical facial features and expression now wears a red leather jacket and black jeans, standing in a busy city street at sunset with warm orange lighting and tall buildings in the background."
         ]
         return self.build_system_prompt(components)

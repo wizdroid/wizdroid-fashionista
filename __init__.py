@@ -20,6 +20,10 @@ from .nodes.preset_outfit_node import (
     NODE_CLASS_MAPPINGS as preset_outfit_mappings,
     NODE_DISPLAY_NAME_MAPPINGS as preset_outfit_display_mappings,
 )
+from .nodes.facial_expression_node import (
+    NODE_CLASS_MAPPINGS as facial_expression_mappings,
+    NODE_DISPLAY_NAME_MAPPINGS as facial_expression_display_mappings,
+)
 from .support_nodes import SUPPORT_NODE_CLASS_MAPPINGS, SUPPORT_NODE_DISPLAY_NAME_MAPPINGS
 
 # Set up logging
@@ -40,6 +44,11 @@ if preset_outfit_mappings and preset_outfit_display_mappings:
     NODE_CLASS_MAPPINGS.update(preset_outfit_mappings)
     NODE_DISPLAY_NAME_MAPPINGS.update(preset_outfit_display_mappings)
     logger.info("ComfyUI Outfit: Loaded preset outfit nodes")
+
+if facial_expression_mappings and facial_expression_display_mappings:
+    NODE_CLASS_MAPPINGS.update(facial_expression_mappings)
+    NODE_DISPLAY_NAME_MAPPINGS.update(facial_expression_display_mappings)
+    logger.info("ComfyUI Outfit: Loaded facial expression nodes")
 
 # Load support nodes
 if SUPPORT_NODE_CLASS_MAPPINGS and SUPPORT_NODE_DISPLAY_NAME_MAPPINGS:
