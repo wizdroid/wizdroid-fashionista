@@ -9,7 +9,7 @@ from ..utils.data_loader import (
 from ..utils.common import apply_preset, extract_outfit_template, apply_outfit_template
 
 # Constants
-PRESET_CATEGORY = "👗 Outfit/Presets"
+PRESET_CATEGORY = "Wizdroid/Outfits/Presets"
 NODE_CACHE = {}
 
 def create_preset_node(gender: str):
@@ -39,7 +39,7 @@ def create_preset_node(gender: str):
         RETURN_TYPES = ("STRING", "STRING", "STRING")
         RETURN_NAMES = ("preset_name", "preset_data", "metadata")
         FUNCTION = "process"
-        CATEGORY = f"{PRESET_CATEGORY}/{gender.capitalize()}"
+        CATEGORY = PRESET_CATEGORY
 
         def process(self, preset, preset_colors, style_seed, export_preset, inputs_json=None):
             # Handle random preset selection

@@ -19,7 +19,7 @@ def female_outfit_node():
 def test_female_node_creation(female_outfit_node):
     """Test that the female outfit node is created successfully."""
     assert female_outfit_node is not None
-    assert female_outfit_node.CATEGORY == "Wizdroid/Outfits/Female"
+    assert female_outfit_node.CATEGORY == "Wizdroid/Outfits/Dynamic"
     assert "torso" in female_outfit_node.INPUT_TYPES()["required"]
 
 def test_prompt_generation(female_outfit_node):

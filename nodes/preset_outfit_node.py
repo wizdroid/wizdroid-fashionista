@@ -12,7 +12,7 @@ from ..utils.data_loader import (
 from ..utils.prompt_builder import PromptBuilder
 
 # Constants
-OUTFIT_CATEGORY = "Wizdroid/Outfits"
+OUTFIT_CATEGORY = "Wizdroid/Outfits/Presets"
 NODE_CACHE = {}
 
 
@@ -64,7 +64,7 @@ def create_preset_outfit_node(gender: str):
         RETURN_TYPES = ("STRING", "INT", "STRING", "STRING")
         RETURN_NAMES = ("positive_prompt", "seed", "negative_prompt", "metadata")
         FUNCTION = "process"
-        CATEGORY = f"{OUTFIT_CATEGORY}/Preset"
+        CATEGORY = OUTFIT_CATEGORY
 
         def process(self, **kwargs):
             seed = int(kwargs.get("seed", 0))

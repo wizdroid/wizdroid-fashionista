@@ -64,7 +64,7 @@ class LightweightPrompterNode:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("enhanced_prompt",)
     FUNCTION = "enhance_prompt"
-    CATEGORY = "Wizdroid/AI"
+    CATEGORY = "Wizdroid/AI/LLM"
     NAME = "🚀 Lightweight Prompter"
 
     def __init__(self):

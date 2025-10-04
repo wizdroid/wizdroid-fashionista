@@ -194,7 +194,7 @@ class OptimizedOllamaVisionNode(BaseOllamaNode):
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("description",)
     FUNCTION = "describe_image"
-    CATEGORY = "Wizdroid/Outfits/AI"
+    CATEGORY = "Wizdroid/AI/Vision"
     NAME = "Optimized Ollama Vision"
 
     def _select_description_style(self, description_style: str, seed: int) -> str:

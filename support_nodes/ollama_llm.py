@@ -186,7 +186,7 @@ class OptimizedOllamaLLMNode:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("enhanced_prompt",)
     FUNCTION = "generate_prompt"
-    CATEGORY = "Wizdroid/Outfits/AI"
+    CATEGORY = "Wizdroid/AI/LLM"
     NAME = "Optimized Ollama Prompter"
 
     def _build_base_prompt(

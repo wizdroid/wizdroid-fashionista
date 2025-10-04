@@ -77,9 +77,17 @@ git clone https://github.com/wizdroid/wizdroid-fashionista.git
 ### Basic Usage
 1. Start ComfyUI
 2. Look for nodes in these categories:
-   - **Wizdroid/Outfits**: Core outfit generation nodes
-   - **Wizdroid/AI**: AI-powered enhancement nodes  
+   - **Wizdroid/Outfits**: Core outfit generation and expression nodes
+     - **Dynamic**: ♀️ Female Outfit, ♂️ Male Outfit
+     - **Presets**: ♀️ Female Preset Outfit, ♂️ Male Preset Outfit  
+     - **Expression**: 🎭 Facial Expression & Lighting
+   - **Wizdroid/AI**: AI-powered enhancement nodes
+     - **LLM**: ✨ Ollama Prompter, 🎯 Simple Ollama, 🚀 Lightweight Prompter
+     - **Vision**: 👁️ Ollama Vision, 👁️ Lightweight Vision
    - **Wizdroid/Utils**: Utility and helper nodes
+     - **Style**: 📸 Photo Style Helper, 🎨 Image Validator
+     - **Character**: 👤 Character Sheet Generator
+     - **Data**: 🧩 Preset Patch Applier, 🧾 Outfit Inputs From JSON
 
 #### Core Outfit Nodes
 - **👗 Female Outfit Node**: Generate female outfits with full customization

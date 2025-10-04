@@ -81,7 +81,7 @@ class CharacterSheetGeneratorNode:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("character_sheet_prompt",)
     FUNCTION = "generate_prompt"
-    CATEGORY = "Wizdroid/Outfits/Support"
+    CATEGORY = "Wizdroid/Utils/Character"
 
     def generate_prompt(
         self,

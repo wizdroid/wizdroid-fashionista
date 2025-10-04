@@ -95,7 +95,7 @@ class LightweightVisionNode:
     RETURN_TYPES = ("STRING",)
     RETURN_NAMES = ("description",)
     FUNCTION = "analyze_image"
-    CATEGORY = "Wizdroid/AI"
+    CATEGORY = "Wizdroid/AI/Vision"
     NAME = "👁️ Lightweight Vision"
 
     def __init__(self):
