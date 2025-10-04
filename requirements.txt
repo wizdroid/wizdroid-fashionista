@@ -14,3 +14,8 @@ torchvision>=0.10.0
 # Vision models (Florence-2, BLIP/BLIP-2, WD14) will be downloaded automatically on first use
 # Models range from 180MB (BLIP base) to 2.7GB (BLIP-2) depending on selection
 
+# Face extraction dependencies
+ultralytics>=8.0.0
+opencv-python>=4.5.0
+segment-anything>=1.0.0
+
